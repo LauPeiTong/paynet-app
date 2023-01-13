@@ -1,28 +1,25 @@
 <template lang="pug">
 .fill-height.goal-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Goal'" :icon="'more-vertical'")
+    upper-title.ma-0(:title="'Shopping Online Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
-    card-challenge()
-    //- ChallengeDetail()
-    //- f-button(:label = "'Accept Challenge'" :width = "30")
+    ChallengeDetail()
+    f-button(:label = "'Accept Challenge'" :width = "30" @click="CompleteChallenge()")
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
-import CardChallenge from '~/components/goal/CardChallenge.vue'
-// import ChallengeDetail from '~/components/goal/ChallengeDetail.vue'
-// import FButton from '~/components/fincare-components/FButton.vue'
+import ChallengeDetail from '~/components/goal/ChallengeDetail.vue'
+import FButton from '~/components/fincare-components/FButton.vue'
 
 export default {
-  name: 'GoalPage',
+  name: 'ChallengePage',
   components: {
     UpperTitle,
-    CardChallenge
-    // ChallengeDetail,
-    // FButton
+    ChallengeDetail,
+    FButton
   },
   layout: 'default',
   data () {
@@ -38,10 +35,10 @@ export default {
   methods: {
     searchBy (newValue) {
       this.search = newValue
+    },
+    goBackToPreviousPage () {
+      this.$router.go(-1)
     }
-    // goBackToPreviousPage () {
-    //   this.$router.go(-1)
-    // }
   }
 }
 </script>

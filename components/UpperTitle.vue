@@ -4,7 +4,7 @@
       f-icon(
         v-if="back === true"
         :icon-name="'arrow-ios-back-outline'"
-        :icon-fill="'white'"
+        :icon-fill="'black'"
         @click="emitBack()"
       )
     v-col.text-center(:cols="8")
