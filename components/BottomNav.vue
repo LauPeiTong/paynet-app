@@ -49,7 +49,7 @@ export default {
         },
         {
           label: 'Account',
-          path: '/account',
+          path: '/',
           name: 'account',
           icon: 'person-outline',
           iconFill: 'person'

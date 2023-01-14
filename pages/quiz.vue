@@ -18,7 +18,7 @@ export default {
     UpperTitle,
     CourseQuiz
   },
-  layout: 'default',
+  layout: 'welcome',
   data () {
     return {
       search: null
@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      scrollSize: 'screen/getScrollClass'
+      scrollSize: 'screen/getScrollClass2'
     })
   },
   methods: {

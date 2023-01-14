@@ -21,7 +21,7 @@ export default {
     ChallengeDetail,
     FButton
   },
-  layout: 'default',
+  layout: 'welcome',
   data () {
     return {
       search: null

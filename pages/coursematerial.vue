@@ -4,8 +4,7 @@
     upper-title.ma-0(:title="'Lesson 3'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     CourseMaterial
-    f-button.mb-16(:label = "'Start the quiz'" @click="getQuiz()")
-
+    bottom-button(:label="'Start the quiz'" @click="getQuiz()")
 </template>
 
 <script>
@@ -14,15 +13,17 @@ import { mapGetters } from 'vuex'
 import UpperTitle from '../components/UpperTitle.vue'
 import CourseMaterial from '~/components/course/CourseMaterial.vue'
 import FButton from '~/components/fincare-components/FButton.vue'
+import BottomButton from '~/components/BottomButton.vue'
 
 export default {
   name: 'ChallengePage',
   components: {
     UpperTitle,
     CourseMaterial,
-    FButton
+    FButton,
+    BottomButton
   },
-  layout: 'default',
+  layout: 'welcome',
   data () {
     return {
       search: null

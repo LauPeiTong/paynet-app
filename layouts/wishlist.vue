@@ -4,7 +4,7 @@ v-app
     v-container.fill-height.pa-0(fluid)
       v-row.ma-0.fill-height
         Nuxt
-        bottom-button
+        bottom-button(:label="'Add new wishlist'")
 </template>
 
 <script>

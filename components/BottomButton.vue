@@ -2,11 +2,11 @@
   v-row.bottom-nav.bottom-column-content-area.pa-4(no-gutters)
     v-col.flex.bottom-nav--col.px-0.mx-0
       f-button.bottom-nav--button(
-        label="Add new wishlist"
+        :label="label"
         block
         dark
         :color="$vuetify.theme.themes.light.primary"
-        @click=""
+        @click="emitClick"
       )
 </template>
 
@@ -17,6 +17,12 @@ import FButton from './fincare-components/FButton.vue'
 export default {
   name: 'BottomButton',
   components: { FButton },
+  props: {
+    label: {
+      type: String,
+      default: null
+    }
+  },
   data () {
     return {
     }
@@ -27,7 +33,10 @@ export default {
   },
   methods: {
     ...mapActions({
-    })
+    }),
+    emitClick () {
+      this.$emit('click')
+    }
   }
 }
 </script>

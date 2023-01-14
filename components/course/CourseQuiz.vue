@@ -67,10 +67,9 @@
                     p.pt-0.mb-0.font-weight-regular.text-caption.secondary--text.text-justify {{ $strLimit(item.answer, 300) }}
     v-row
       v-col.text-left
-        eva-icon.py-5(name="arrow-circle-left" :fill="$vuetify.theme.themes.light.darkGrey"  width='50' height='50')
+        eva-icon.pt-16(name="arrow-circle-left" :fill="$vuetify.theme.themes.light.darkGrey"  width='50' height='50')
       v-col.text-right
-
-        eva-icon.py-5(name="arrow-circle-right" :fill="$vuetify.theme.themes.light.tertiary"  width='50' height='50' @click="getCourse ()")
+        eva-icon.pt-16(name="arrow-circle-right" :fill="$vuetify.theme.themes.light.tertiary"  width='50' height='50' @click="getCourse ()")
 </template>
 
 <script>
