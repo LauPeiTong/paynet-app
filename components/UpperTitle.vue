@@ -4,7 +4,7 @@
       f-icon(
         v-if="back === true"
         :icon-name="'arrow-ios-back-outline'"
-        :icon-fill="'black'"
+        :icon-fill="titleClass == 'dark-background'? 'white' : iconColor"
         @click="emitBack()"
       )
     v-col.text-center(:cols="8")
@@ -12,9 +12,9 @@
     v-col.text-center(:cols="2")
       f-icon(
         :icon-name="icon"
-        :icon-fill="iconColor"
+        :icon-fill="rightIconColor ?? iconColor"
         :border="border"
-        @click=""
+        @click="emitClick()"
       )
 
 </template>
@@ -48,6 +48,10 @@ export default {
     border: {
       type: Boolean,
       default: false
+    },
+    rightIconColor: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -77,6 +81,9 @@ export default {
     }),
     emitBack () {
       this.$emit('goBack')
+    },
+    emitClick () {
+      this.$emit('clicked')
     }
   }
 }

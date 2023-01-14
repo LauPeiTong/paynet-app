@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.rounded-xl.d-flex.flex-column.justify-start(
+  v-card.fincare-card.rounded-xl.d-flex.flex-column.justify-start(
     v-if="disabled === false"
     @click="emitClick();"
     :min-height="height"
@@ -9,14 +9,16 @@
     .px-4.pt-4.mb-auto
       v-row
         v-col(:cols="10")
-          p.mb-0.font-weight-medium.text-h6(:class="color ? 'white--text' : 'secondary--text'") {{ label }}
+          p.mb-0.font-weight-medium.text-h5(v-if="h5Title" :class="titleColorClass") {{ label }}
+          p.mb-0.font-weight-medium.text-h6(v-else :class="titleColorClass") {{ label }}
         v-col.text-right(v-if="cornerIcon" :cols="2")
           //- Error: child cannot be removed
           v-btn(icon @click.stop="emitIconClick")
             client-only
               eva-icon(:name="cornerIconName" :fill="cornerIconColor"  width='32' height='32')
-      p.mb-0.caption.font-weight-regular(:class="color ? 'white--text' : 'secondary--text'") {{ label2 }}
-      p.mb-0.caption.font-weight-light(:class="color ? 'white--text' : 'secondary--text'") {{ label3 }}
+      p.mb-0.caption.font-weight-regular(:class="fontColorClass") {{ label2 }}
+      p.mb-0.caption.font-weight-light(:class="fontColorClass") {{ label3 }}
+      p.mb-0.font-16(:class="fontColorClass") {{ label4 }}
       slot(name="content")
     v-card-actions.px-4.pb-4
       slot(name="action")
@@ -30,14 +32,15 @@
     .px-4.pt-4.mb-auto
       v-row
         v-col(:cols="10")
-          p.mb-0.font-weight-medium.text-h6(:class="color ? 'white--text' : 'secondary--text'") {{ label }}
+          p.mb-0.font-weight-medium.text-h6(:class="fontColorClass") {{ label }}
         v-col.text-right(v-if="cornerIcon" :cols="2")
           //- Error: child cannot be removed
           v-btn(icon)
             client-only
               eva-icon(:name="cornerIconName" :fill="cornerIconColor"  width='32' height='32')
-      p.mb-0.caption.font-weight-regular(:class="color ? 'white--text' : 'secondary--text'") {{ label2 }}
-      p.mb-0.caption.font-weight-light(:class="color ? 'white--text' : 'secondary--text'") {{ label3 }}
+      p.mb-0.caption.font-weight-regular(:class="fontColorClass") {{ label2 }}
+      p.mb-0.caption.font-weight-light(:class="fontColorClass") {{ label3 }}
+      p.mb-0.caption.font-weight-light(:class="fontColorClass") {{ label4 }}
       slot(name="content")
     v-card-actions.px-4.pb-4
       slot(name="action")
@@ -58,6 +61,10 @@ export default {
       type: String,
       default: null
     },
+    label4: {
+      type: String,
+      default: null
+    },
     height: {
       type: Number,
       default: 95
@@ -73,6 +80,14 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    h5Title: {
+      type: Boolean,
+      default: false
+    },
+    labelColorClass: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -83,6 +98,20 @@ export default {
     }
   },
   computed: {
+    fontColorClass () {
+      if (this.color) {
+        return 'white--text'
+      } else {
+        return 'secondary--text'
+      }
+    },
+    titleColorClass () {
+      if (this.labelColorClass) {
+        return this.labelColorClass
+      } else {
+        return this.fontColorClass
+      }
+    }
   },
   methods: {
     emitClick () {
@@ -104,5 +133,7 @@ export default {
 </script>
 
 <style scoped>
-
+.font-16 {
+  font-size: 16px;
+}
 </style>
