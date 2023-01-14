@@ -40,6 +40,7 @@
               eva-icon(:name="cornerIconName" :fill="cornerIconColor"  width='32' height='32')
       p.mb-0.caption.font-weight-regular(:class="fontColorClass") {{ label2 }}
       p.mb-0.caption.font-weight-light(:class="fontColorClass") {{ label3 }}
+      p.mb-0.caption.font-weight-light(:class="fontColorClass") {{ label4 }}
       slot(name="content")
     v-card-actions.px-4.pb-4
       slot(name="action")
