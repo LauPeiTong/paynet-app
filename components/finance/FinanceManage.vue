@@ -25,7 +25,7 @@
               eva-icon(name="credit-card" fill="white" height="28" width="28")
     v-col.pl-1(:cols="6")
       f-card.d-flex.flex-column(
-        @click=""
+        @click="goToWishlistPage"
         :height="150"
         :label="'Wishlist'"
         :label2="'Reach your financial goal'"
@@ -70,6 +70,9 @@ export default {
     }),
     goToExpensesPage () {
       this.$router.push('/expenses')
+    },
+    goToWishlistPage () {
+      this.$router.push('/wishlist')
     }
   }
 }

@@ -2,35 +2,29 @@
 .fill-height.expenses-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
     upper-title.ma-0(
-      :title="'Expenses'"
-      :icon="'credit-card-outline'"
+      :title="'Wishlist'"
+      :icon="'file-text-outline'"
       :rightIconColor="$vuetify.theme.themes.light.primary"
       @clicked=""
       @goBack="goBackToPreviousPage"
       :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
-    expenses-chart
-    expenses-category
-    expenses-history
+    wishlist-item
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
-import ExpensesChart from '../components/finance/ExpensesChart.vue'
-import ExpensesCategory from '../components/finance/ExpensesCategory.vue'
-import ExpensesHistory from '../components/finance/ExpensesHistory.vue'
+import WishlistItem from '../components/finance/WishlistItem.vue'
 
 export default {
   name: 'WishlistPage',
   components: {
     UpperTitle,
-    ExpensesChart,
-    ExpensesCategory,
-    ExpensesHistory
+    WishlistItem
   },
-  layout: 'welcome',
+  layout: 'wishlist',
   data () {
     return {
       search: null

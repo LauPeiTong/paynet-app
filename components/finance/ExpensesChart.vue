@@ -10,7 +10,7 @@
             v-list-item-title.secondary--text.font-weight-bold.text-h5.mt-2 {{ months[selectedIndex] }}
           v-col.pb-0.text-left.align-bottom(align-self="end")
             f-icon(:icon-name="'arrow-ios-forward-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="")
-        v-list-item-subtitle.sutitle-1.darkGrey--text Monthly Expenses
+        v-list-item-subtitle.subtitle-1.darkGrey--text Monthly Expenses
         ApexCharts.d-flex.justify-space-around(type="donut" :options="chartOptions" :series="series" width="320" height="320")
 </template>
 
