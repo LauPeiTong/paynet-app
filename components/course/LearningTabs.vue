@@ -1,5 +1,5 @@
 <template lang="pug">
-.forum-tabs
+.learning-tabs
   v-tabs.scroll-x(
     background-color="white"
     :color="$vuetify.theme.themes.light.primary"
@@ -14,7 +14,7 @@ import { mapGetters, mapActions } from 'vuex'
 import VueHorizontalList from 'vue-horizontal-list'
 
 export default {
-  name: 'ForumTabs',
+  name: 'LearningTabs',
   components: {
     VueHorizontalList
   },

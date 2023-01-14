@@ -41,11 +41,11 @@ export default {
           iconFill: 'gift'
         },
         {
-          label: 'Forum',
-          path: '/forum',
-          name: 'forum',
-          icon: 'globe-2-outline',
-          iconFill: 'globe-2'
+          label: 'Learning',
+          path: '/learning',
+          name: 'learning',
+          icon: 'book-outline',
+          iconFill: 'book'
         },
         {
           label: 'Account',

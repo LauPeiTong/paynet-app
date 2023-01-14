@@ -99,6 +99,6 @@ export default {
 }
 
 .dark-background {
-  background-color: #FAAF08;
+  background-color: #333333;
 }
 </style>

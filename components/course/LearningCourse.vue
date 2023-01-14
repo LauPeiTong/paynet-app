@@ -1,5 +1,5 @@
 <template lang="pug">
-.forum-course
+.learning-course
   continue-course.pt-10.pb-2
   course-category.px-4.pb-4
   current-courses.pb-4
@@ -10,13 +10,13 @@
 <script>
 // import { off } from 'process'
 import { mapGetters, mapActions } from 'vuex'
-import ContinueCourse from '../course/ContinueCourse.vue'
-import CourseCategory from '../course/CourseCategory.vue'
-import CurrentCourses from '../course/CurrentCourses.vue'
-import CourseList from '../course/CourseList.vue'
+import ContinueCourse from './ContinueCourse.vue'
+import CourseCategory from './CourseCategory.vue'
+import CurrentCourses from './CurrentCourses.vue'
+import CourseList from './CourseList.vue'
 
 export default {
-  name: 'ForumCourse',
+  name: 'LearningCourse',
   components: {
     ContinueCourse,
     CourseCategory,

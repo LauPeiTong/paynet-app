@@ -34,77 +34,77 @@
     </template>
 
 <script>
-    import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
-    export default {
-      name: 'ChallengeDetail',
-      components: {
-      },
-      props: {
-        title: {
-          type: String,
-          default: null
-        }
-      },
-      data () {
-        return {
-          posts: [
-            {
-              id: 1,
-              title: '(80 points)',
-              img: 'shopping',
-              challenge: 'Take a Challenge',
-              content: 'Reduce your Online Shopping expense by 30%',
-              information: 'Last Statement cycle you have spent RM 150.00 on Online Shopping. Take a challenge to reduce your Online Shopping Expense to RM 105.00 or less by next statement cycle.'
-
-            }
-            // {
-            //   id: 2,
-            //   title: '(50 points)',
-            //   img: 'fastfood',
-            //   challenge: 'Take a Challenge',
-            //   content: 'Reduce your fast food expenses by 30%'
-
-            // },
-            // {
-            //   id: 3,
-            //   title: '(100 points)',
-            //   img: 'game',
-            //   challenge: 'Take a Challenge',
-            //   content: 'Reduce your entertainment expenses by 40%'
-            // }
-
-          ]
-        }
-      },
-      computed: {
-        ...mapGetters({
-          widthX: 'screen/getWidthClass'
-        }),
-        getImgWidth () {
-          return { width: `${window.innerWidth - 80}px` }
-        }
-      },
-      methods: {
-        ...mapActions({
-        }),
-        avatar (id) {
-          return require(`../../assets/avatar/avatar${id}.jpg`)
-        },
-        img (name) {
-          return require(`../../assets/img/${name}.jpg`)
-        }
-      }
+export default {
+  name: 'ChallengeDetail',
+  components: {
+  },
+  props: {
+    title: {
+      type: String,
+      default: null
     }
-    </script>
+  },
+  data () {
+    return {
+      posts: [
+        {
+          id: 1,
+          title: '(80 points)',
+          img: 'shopping',
+          challenge: 'Take a Challenge',
+          content: 'Reduce your Online Shopping expense by 30%',
+          information: 'Last Statement cycle you have spent RM 150.00 on Online Shopping. Take a challenge to reduce your Online Shopping Expense to RM 105.00 or less by next statement cycle.'
 
-    <style lang="scss" scoped>
-    .min-350-width {
-      min-width: 353px !important;
+        }
+        // {
+        //   id: 2,
+        //   title: '(50 points)',
+        //   img: 'fastfood',
+        //   challenge: 'Take a Challenge',
+        //   content: 'Reduce your fast food expenses by 30%'
+
+        // },
+        // {
+        //   id: 3,
+        //   title: '(100 points)',
+        //   img: 'game',
+        //   challenge: 'Take a Challenge',
+        //   content: 'Reduce your entertainment expenses by 40%'
+        // }
+
+      ]
     }
-
-    .mb-negative {
-      margin-bottom: -7px;
+  },
+  computed: {
+    ...mapGetters({
+      widthX: 'screen/getWidthClass'
+    }),
+    getImgWidth () {
+      return { width: `${window.innerWidth - 80}px` }
     }
+  },
+  methods: {
+    ...mapActions({
+    }),
+    avatar (id) {
+      return require(`../../assets/avatar/avatar${id}.jpg`)
+    },
+    img (name) {
+      return require(`../../assets/img/${name}.jpg`)
+    }
+  }
+}
+</script>
 
-    </style>
+<style lang="scss" scoped>
+.min-350-width {
+  min-width: 353px !important;
+}
+
+.mb-negative {
+  margin-bottom: -7px;
+}
+
+</style>
