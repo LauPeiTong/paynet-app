@@ -6,7 +6,7 @@
     v-col.pa-0.ma-0.d-flex
       v-row.pt-4.mb-1.pr-2.align-end.justify-end(@click="")
         p.mb-0 View all
-          w-icon.ml-3(
+          f-icon.ml-3(
             :height="20"
             :width="20"
             :icon-name="'arrow-forward-outline'"
@@ -50,12 +50,12 @@ export default {
   data () {
     return {
       story: [
-        { id: 1, name: 'Food Protector', new: 150 },
+        { id: 1, name: 'Money Protector', new: 150 },
         { id: 2, name: 'Save Money Group', new: 121 },
-        { id: 3, name: 'I love discount', new: 87 },
-        { id: 4, name: 'Selangor Food', new: 45 },
-        { id: 5, name: 'Penang Discount Food', new: 35 },
-        { id: 6, name: 'Healthy Food Group', new: 20 }
+        { id: 3, name: 'Wealth Manager', new: 87 },
+        { id: 4, name: 'Money Matters', new: 45 },
+        { id: 5, name: 'Finance Savvy', new: 35 },
+        { id: 6, name: 'Cash Flow Crew', new: 20 }
       ],
       options: {
         responsive: [
