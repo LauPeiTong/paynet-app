@@ -104,8 +104,10 @@ export default {
         this.$router.push('/challengedetail')
       } else if (id === 2) {
         this.$router.push('/challengedetail1')
-      } else {
+      } else if (id === 3) {
         this.$router.push('/challengedetail2')
+      } else {
+        this.$router.push('/quiz')
       }
     }
   }

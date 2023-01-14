@@ -3,17 +3,20 @@
   v-row.pa-0.ma-0.upper-row
     upper-title.ma-0(:title="'Account'" :icon="'more-vertical'")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
+    Quiz
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
+import Quiz from '../components/quiz/Quiz.vue'
 
 export default {
   name: 'AccountPage',
   components: {
-    UpperTitle
+    UpperTitle,
+    Quiz
   },
   layout: 'default',
   data () {

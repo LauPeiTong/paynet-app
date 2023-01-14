@@ -1,7 +1,7 @@
 <template lang="pug">
 .fill-height.account-home-page.pa-0.ma-0
     v-row.pa-0.ma-0.upper-row
-      upper-title.ma-0(:title="'Quiz'" :icon="'more-vertical'")
+      upper-title.ma-0(:title="'Quiz'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
     .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
       CourseQuiz
 </template>
@@ -32,6 +32,9 @@ export default {
   methods: {
     searchBy (newValue) {
       this.search = newValue
+    },
+    goBackToPreviousPage () {
+      this.$router.go(-1)
     }
   }
 }
