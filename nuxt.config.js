@@ -32,6 +32,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/client.js', ssr: false },
+    { src: '~/plugins/apex-chart.js', mode: 'client' },
     '~/plugins/vuetify.js',
     '~/plugins/filter.js',
     '~/plugins/currency.js'
