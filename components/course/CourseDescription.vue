@@ -51,6 +51,7 @@
                   :outlined="item.status !== 'Completed'"
                   :color="item.status === 'Completed' ? lessonColor(item.id) : 'white'"
                   :disabled="!item.status"
+                  @click="goToCourseMaterialPage ()"
                 ) {{ item.status ? item.status : 'Start'}}
 
   .course-additional(v-if="isEnrolled")
@@ -62,12 +63,12 @@
       template(v-slot:content)
         p.pt-2.text-justify Here are a few extra resources to help you learn more effectively:
         ul.pt-2
-          li.pb-2 Article -
+          li.pb-2
             |
-            a(href="https://www.udemy.com/course/find-a-job-interview-skills-training-course/") A newbies guide to interview
-          li.pb-2 Video -
+            a(href="https://www.rhbgroup.com/overview/insurance/index.html") Insurance Plan RHB
+          li.pb-2
             |
-            a(href="https://www.ted.com/playlists/352/talks_to_watch_before_a_job_in") Interview Ted Talk
+            a(href="https://www.rhbgroup.com/personal/account-finder/index.html?p=term-deposit&t=conventional") Fixed Deposit RHB
 
 </template>
 
@@ -95,32 +96,32 @@ export default {
       lessons: [
         {
           id: 1,
-          name: 'Course Introduction',
+          name: 'Understanding income and expenses',
           status: 'Completed'
         },
         {
           id: 2,
-          name: 'Before You Get the Interview',
+          name: 'Saving money',
           status: 'Completed'
         },
         {
           id: 3,
-          name: 'Once the Interview is Scheduled',
+          name: 'Setting financial goals',
           status: 'Start'
         },
         {
           id: 4,
-          name: 'During the Interview',
+          name: 'Tracking progress',
           status: null
         },
         {
           id: 5,
-          name: 'After the Interview',
+          name: 'Prioritizing expenses',
           status: null
         },
         {
           id: 6,
-          name: 'Practice Questions',
+          name: 'Making smart financial decisions',
           status: null
         }
       ]
@@ -143,6 +144,9 @@ export default {
       } else {
         return '#312553'
       }
+    },
+    goToCourseMaterialPage () {
+      this.$router.push('/coursematerial')
     }
   }
 }

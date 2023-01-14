@@ -8,7 +8,7 @@
     v-item-group.pt-4.pb-8
       template(v-for='item in posts')
         v-row.d-flex.flex-column.px-4.pb-4.justify-center.mb-4
-          v-card.rounded-xl.d-flex.flex-column.align-center(
+          v-card.rounded-xl.d-flex.flex-column.justify-center(
             @click=""
             :min-height="600"
             outlined
@@ -25,7 +25,7 @@
                   eva-icon(name="more-vertical-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
               p.mb-0.pt-2.caption.font-weight-medium.text-h6.secondary--text {{ item.title }}
 
-            video(:src="videoSrc(item.vid)"  controls ref="video" width="320")
+            video(:src="videoSrc(item.vid)"  controls ref="video" width="350")
             v-card-actions.px-4.pt-4
               v-row
                 v-col.d-flex.flex-row
