@@ -61,27 +61,27 @@ export default {
       posts: [
         {
           id: 1,
-          title: '15 way to save money on food',
-          content: 'When you start shopping for your own food at uni, one of the biggest shocks is just how expensive it can be – especially cheese, right? According to our yearly National Student Money Survey, students spend on average £116 a month on groceries alone – that\'s more cash than they spend on anything else apart from rent! When it comes to food shopping, students tend to fall into the same pitfalls over and over again. How many times have you bought a one-off meal from the Tesco Express around the corner instead of stocking up at a big-budget supermarket?',
+          title: 'Financial Future',
+          content: 'Take control of your financial future by setting financial goals, creating a budget, saving a portion of your income, and investing in a diverse portfolio of assets. By planning and being consistent, you can secure a financially stable future.',
           user: 'Emma',
           time: '5 mins',
-          group: 'Food Protector'
+          group: 'Money Protector'
         },
         {
           id: 2,
-          title: 'Discount Food, Up to 50%',
-          img: 'discount',
-          user: 'Secret Recipe',
+          title: 'Webinar: Moving The Financial Needle',
+          img: 'webinar',
+          user: 'Money Savior',
           time: '9 mins',
-          group: 'Save Moeny Group'
+          group: 'Save Money Group'
         },
         {
           id: 3,
-          title: '10 Malaysia Day food promotions & specials you can’t miss',
-          content: 'One of the joys of being Malaysian next to being a melting pot of cultures or a world-renowned food haven, is the number of public holidays we have. And with Malaysia Day just around the corner, it’s the perfect time to take advantage of the holiday’s best dining promotions. In commemoration of the establishment of the Malaysian federation, we’ve curated a delicious list of our favourite franchises and restaurants that are having amazing discounts, offers and promotions right up to 16 September 2022. Happy Malaysia Day, fellow foodies!',
+          title: 'What is Financial Literacy?',
+          content: 'Financial literacy is the knowledge and skills needed to make informed and effective decisions regarding the use and management of money, including budgeting, saving, investing, and credit management. It is important because it empowers individuals to take control of their financial lives, make informed decisions about their money, and achieve their financial goals. Understanding and practicing the key concepts of financial literacy can lead to financial stability and security.',
           user: 'Anna',
           time: '15 mins',
-          group: 'I love discount'
+          group: 'Wealth Manager'
         }
 
       ]

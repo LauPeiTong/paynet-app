@@ -7,6 +7,8 @@
     story-list.pt-4
     forum-tabs(@click="getTab")
     forum-post(v-if="tab === 'Post' || tab === 'Popular'" :title="tab")
+    forum-live(v-if="tab === 'Live'" :title="tab")
+    forum-course(v-if="tab === 'Course'" :title="tab")
 </template>
 
 <script>
@@ -17,6 +19,8 @@ import FSearchBar from '../components/fincare-components/FSearchBar.vue'
 import StoryList from '../components/forum/StoryList.vue'
 import ForumTabs from '../components/forum/ForumTabs.vue'
 import ForumPost from '../components/forum/ForumPost.vue'
+import ForumLive from '../components/forum/ForumLive.vue'
+import ForumCourse from '../components/forum/ForumCourse.vue'
 
 export default {
   name: 'ForumPage',
@@ -25,7 +29,9 @@ export default {
     FSearchBar,
     StoryList,
     ForumTabs,
-    ForumPost
+    ForumPost,
+    ForumLive,
+    ForumCourse
   },
   layout: 'default',
   data () {
