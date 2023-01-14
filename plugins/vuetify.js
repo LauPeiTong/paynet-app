@@ -9,7 +9,7 @@ export default new Vuetify({
         primary: '#0083BB', // blue
         secondary: '#333333', // black
         tertiary: '#035172', // dark blue
-        danger: '#C82F2F', // orange
+        danger: '#C82F2F', // red
         darkGrey: '#848484',
         lightGrey: '#C1C1C1',
         warning: '#BB0000', // red

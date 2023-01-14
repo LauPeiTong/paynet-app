@@ -6,7 +6,7 @@
     v-col.pa-0.ma-0.d-flex
       v-row.pt-4.mb-1.pr-2.align-end.justify-end(@click="")
         p.mb-0 View all
-          w-icon.ml-3(
+          f-icon.ml-3(
             :height="20"
             :width="20"
             :icon-name="'arrow-forward-outline'"
