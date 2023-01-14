@@ -1,7 +1,6 @@
 <template lang="pug">
   v-btn.wecan-button.text-none.rounded-lg(
     elevation="0"
-    :width="width"
     :block="block"
     :dark="dark"
     :min-height="buttonMinHeight"
@@ -78,12 +77,7 @@ export default {
     iconOnly: {
       type: Boolean,
       default: false
-    },
-    width: {
-      type: Number,
-      default: 30
     }
-
   },
   computed: {
     buttonMinHeight () {

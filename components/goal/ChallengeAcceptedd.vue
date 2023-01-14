@@ -23,12 +23,34 @@
         )
           .px-4.pt-4.mb-auto
             v-row
+              v-col.pt-4(:cols="2")
+                //- v-avatar(size="36")
+                //-   img(:src="avatar(item.id)")
+              v-col.pl-0(:cols="8")
+                //- p.mb-negative.font-weight-regular.subtitle-1.secondary--text {{ item.group }}
+                //- p.mb-0.font-weight-regular.subtitle-2.secondary--text {{ item.user }} . {{ item.time }}
+              v-col.pr-0.pt-4.text-right(:cols="2")
+                //- eva-icon(name="more-vertical-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
+
+            v-row
               v-col
                 v-img(v-if="item.img" :src="img(item.img)" :style="getImgWidth")
                 p.pt-5.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
                 p.pt-2.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
-                p.pt-3.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit("Accept Now", 300) }}
+                p.pt-3.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
           v-card-actions.px-4.pt-4
+            v-row
+              //- v-col.d-flex.flex-row
+              //-   eva-icon(name="arrow-up" :fill="$vuetify.theme.themes.light.primary"  width='24' height='24')
+              //-   p.mr-auto.primary--text 414
+              //-   eva-icon(name="arrow-down" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
+              //- v-col.d-flex.flex-row
+              //-   eva-icon.pr-2(name="message-circle-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
+              //-   p Comment
+              //- v-col.d-flex.flex-row
+              //-   eva-icon.pr-2(name="navigation-2-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
+              //-   p Share
+
 </template>
 
 <script>
@@ -53,7 +75,8 @@ export default {
           title: '(80 points)',
           img: 'shopping',
           challenge: 'Take a Challenge',
-          content: 'Reduce your Online Shopping expense by 30%'
+          content: 'Reduce your Online Shopping expense by 30%',
+          label: 'Accepted'
 
         },
         {
@@ -61,7 +84,8 @@ export default {
           title: '(50 points)',
           img: 'fastfood',
           challenge: 'Take a Challenge',
-          content: 'Reduce your fast food expenses by 30%'
+          content: 'Reduce your fast food expenses by 30%',
+          label: 'Accept Now'
 
         },
         {
@@ -69,14 +93,8 @@ export default {
           title: '(100 points)',
           img: 'game',
           challenge: 'Take a Challenge',
-          content: 'Reduce your entertainment expenses by 40%'
-        },
-        {
-          id: 4,
-          title: '(10 points)',
-          img: 'investment',
-          challenge: 'Daily Challenge',
-          content: 'Investment Pop Quiz'
+          content: 'Reduce your entertainment expenses by 40%',
+          label: 'Accept Now'
         }
 
       ]

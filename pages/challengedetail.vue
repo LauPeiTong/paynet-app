@@ -4,7 +4,7 @@
     upper-title.ma-0(:title="'Shopping Online Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail()
-    f-button(:label = "'Accept Challenge'" :width = "30" @click="CompleteChallenge()")
+    f-button(:label = "'Accept Challenge'" @click="Accepted()")
 </template>
 
 <script>
@@ -38,6 +38,9 @@ export default {
     },
     goBackToPreviousPage () {
       this.$router.go(-1)
+    },
+    Accepted () {
+      this.$router.push('/challengeaccepted')
     }
   }
 }
