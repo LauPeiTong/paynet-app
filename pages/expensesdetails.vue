@@ -9,7 +9,7 @@
       @goBack="goBackToPreviousPage"
       :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
-    expenses-details(:items="getItems")
+    expenses-details.pb-2(:items="getItems")
 </template>
 
 <script>

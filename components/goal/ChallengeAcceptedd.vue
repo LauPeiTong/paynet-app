@@ -1,21 +1,28 @@
 <template lang="pug">
-.forum-post.px-4
-  v-row.align-center.py-2.pt-3.mb-2.justify-center
-    v-card.rounded-lg.d-flex.flex-column.justify-center(
-      @click=""
-      :min-height="100"
-      :min-width="250"
-      outlined
-    )
-      .px-4.pt-3.mb-auto
-        v-row
-          eva-icon.py-5(name="gift-outline" :fill="$vuetify.theme.themes.light.tertiary"  width='50' height='50')
-          v-col
-            p.pt-0.mb-0.font-weight-regular.subtitle-1.secondary--text.text-justify {{ $strLimit("Total RHB Points: ", 300) }}
-            p.pt-0.mb-0.font-weight-bold.text-h4.primary--text.text-justify {{ $strLimit("10000", 300) }}
-  v-item-group.pt-5.pb-8
+.card-challenge.px-4
+  v-card.rounded-lg(outlined)
+    v-list-item.pt-2(three-line)
+      v-list-item-avatar(size="60" tile)
+        v-img(:src="challenge")
+      v-list-item-content
+        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total RHB Points:
+        v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
+    v-divider.mx-4
+    v-list-item
+      v-list-item-title.darkGrey--text.font-weight-medium.text-h6 Your level: 14
+      eva-icon.mt-2(name="flag-outline" :fill="$vuetify.theme.themes.light.darkGrey")
+    v-divider.mx-4
+    v-list-item
+      v-list-item-title.font-weight-medium.text-h6
+        |
+        a.success--text(@click="goToVoucherPage()") Get your vouchers
+      eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.success")
+  v-row.pa-0.ma-0
+    v-col.pa-0.ma-0
+      p.text-h6.font-weight-bold.pt-6.mb-0.secondary--text Challenges
+  v-item-group.pt-4.pb-8
     template(v-for='item in posts')
-      v-row.d-flex.flex-column.px-4.pb-4.justify-center.mb-4
+      v-row.d-flex.flex-column.px-4.pb-4.justify-center
         v-card.rounded-xl.d-flex.flex-column.justify-start(
           @click="goToChallengeDetail(item.id)"
           :min-height="300"
@@ -23,34 +30,13 @@
         )
           .px-4.pt-4.mb-auto
             v-row
-              v-col.pt-4(:cols="2")
-                //- v-avatar(size="36")
-                //-   img(:src="avatar(item.id)")
-              v-col.pl-0(:cols="8")
-                //- p.mb-negative.font-weight-regular.subtitle-1.secondary--text {{ item.group }}
-                //- p.mb-0.font-weight-regular.subtitle-2.secondary--text {{ item.user }} . {{ item.time }}
-              v-col.pr-0.pt-4.text-right(:cols="2")
-                //- eva-icon(name="more-vertical-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
-
-            v-row
               v-col
-                v-img(v-if="item.img" :src="img(item.img)" :style="getImgWidth")
-                p.pt-5.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
-                p.pt-2.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
-                p.pt-3.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
-          v-card-actions.px-4.pt-4
-            v-row
-              //- v-col.d-flex.flex-row
-              //-   eva-icon(name="arrow-up" :fill="$vuetify.theme.themes.light.primary"  width='24' height='24')
-              //-   p.mr-auto.primary--text 414
-              //-   eva-icon(name="arrow-down" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
-              //- v-col.d-flex.flex-row
-              //-   eva-icon.pr-2(name="message-circle-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
-              //-   p Comment
-              //- v-col.d-flex.flex-row
-              //-   eva-icon.pr-2(name="navigation-2-outline" :fill="$vuetify.theme.themes.light.brown"  width='24' height='24')
-              //-   p Share
-
+                v-img.rounded-xl(v-if="item.img" :src="img(item.img)" :style="getImgWidth")
+                p.pt-2.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
+                p.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
+                p.pt-5.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
+  .pb-16
+  .pb-4
 </template>
 
 <script>
@@ -69,6 +55,7 @@ export default {
   },
   data () {
     return {
+      challenge: require('../../assets/img/challenge.png'),
       posts: [
         {
           id: 1,
@@ -77,7 +64,6 @@ export default {
           challenge: 'Take a Challenge',
           content: 'Reduce your Online Shopping expense by 30%',
           label: 'Accepted'
-
         },
         {
           id: 2,
@@ -85,8 +71,7 @@ export default {
           img: 'fastfood',
           challenge: 'Take a Challenge',
           content: 'Reduce your fast food expenses by 30%',
-          label: 'Accept Now'
-
+          label: 'Accept now'
         },
         {
           id: 3,
@@ -94,7 +79,15 @@ export default {
           img: 'game',
           challenge: 'Take a Challenge',
           content: 'Reduce your entertainment expenses by 40%',
-          label: 'Accept Now'
+          label: 'Accept now'
+        },
+        {
+          id: 4,
+          title: '(10 points)',
+          img: 'investment',
+          challenge: 'Daily Challenge',
+          content: 'Investment Pop Quiz',
+          label: 'Accept now'
         }
 
       ]
@@ -122,9 +115,14 @@ export default {
         this.$router.push('/challengedetail')
       } else if (id === 2) {
         this.$router.push('/challengedetail1')
-      } else {
+      } else if (id === 3) {
         this.$router.push('/challengedetail2')
+      } else {
+        this.$router.push('/quiz')
       }
+    },
+    goToVoucherPage () {
+      this.$router.push('/voucher')
     }
   }
 }

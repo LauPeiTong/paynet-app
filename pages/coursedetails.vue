@@ -58,7 +58,7 @@ export default {
     ...mapGetters({
       course: 'course/getSelectedCourse',
       isEnrolled: 'course/isEnrolled',
-      scrollSize: 'screen/getScrollClass'
+      scrollSize: 'screen/getScrollClass2'
     }),
     background () {
       return require('../assets/img/courses.jpg')

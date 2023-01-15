@@ -1,7 +1,7 @@
 <template lang="pug">
 .fill-height.goal-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Goal'" :icon="'more-vertical'")
+    upper-title.ma-0(:title="'Challenge'" :icon="'more-vertical'")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeAcceptedVue
 </template>

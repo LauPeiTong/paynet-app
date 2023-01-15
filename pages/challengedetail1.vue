@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      scrollSize: 'screen/getScrollClass'
+      scrollSize: 'screen/getScrollClass2'
     })
   },
   methods: {

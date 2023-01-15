@@ -38,6 +38,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .bottom-column-content-area {
