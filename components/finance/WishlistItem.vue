@@ -35,7 +35,7 @@
           v-row.mt-0
             v-col.text-center
               p.mb-0.secondary--text.font-weight-bold.text-h5 Get 5000 RHB Points
-              p.darkGrey--text.font-weight-medium If you ach your goal before 2023 Jun
+              p.darkGrey--text.font-weight-medium If you reach your goal before 2023 Jun
     v-card.rounded-lg.mt-4.mb-16(outlined)
       v-list-item.pt-2(three-line)
         v-list-item-content.pt-0
