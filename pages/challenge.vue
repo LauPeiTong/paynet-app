@@ -1,21 +1,22 @@
 <template lang="pug">
-.fill-height.account-home-page.pa-0.ma-0
+.fill-height.challenge-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Account'" :icon="'more-vertical'")
+    upper-title.ma-0(:title="'Challenge'" :icon="'more-vertical'")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
+    card-challenge
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
-import Quiz from '../components/quiz/Quiz.vue'
+import CardChallenge from '~/components/goal/CardChallenge.vue'
 
 export default {
-  name: 'AccountPage',
+  name: 'ChallengePage',
   components: {
     UpperTitle,
-    Quiz
+    CardChallenge
   },
   layout: 'default',
   data () {
@@ -25,7 +26,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      scrollSize: 'screen/getScrollClass'
+      scrollSize: 'screen/getScrollClass2'
     })
   },
   methods: {

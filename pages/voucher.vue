@@ -1,24 +1,30 @@
 <template lang="pug">
-.fill-height.goal-page.pa-0.ma-0
+.fill-height.expenses-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Challenge'" :icon="'more-vertical'")
+    upper-title.ma-0(
+      :title="'Voucher'"
+      :icon="'more-vertical'"
+      :rightIconColor="$vuetify.theme.themes.light.secondary"
+      @clicked=""
+      @goBack="goBackToPreviousPage"
+      :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
-    card-challenge()
+    voucher-list
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
-import CardChallenge from '~/components/goal/CardChallenge.vue'
+import VoucherList from '../components/goal/VoucherList.vue'
 
 export default {
-  name: 'GoalPage',
+  name: 'VoucherPage',
   components: {
     UpperTitle,
-    CardChallenge
+    VoucherList
   },
-  layout: 'default',
+  layout: 'welcome',
   data () {
     return {
       search: null
@@ -26,12 +32,15 @@ export default {
   },
   computed: {
     ...mapGetters({
-      scrollSize: 'screen/getScrollClass'
+      scrollSize: 'screen/getScrollClass2'
     })
   },
   methods: {
     searchBy (newValue) {
       this.search = newValue
+    },
+    goBackToPreviousPage () {
+      this.$router.go(-1)
     }
   }
 }

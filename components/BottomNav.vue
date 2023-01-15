@@ -34,9 +34,9 @@ export default {
           iconFill: 'briefcase'
         },
         {
-          label: 'Goal',
-          path: '/goal',
-          name: 'goal',
+          label: 'Challenge',
+          path: '/challenge',
+          name: 'challenge',
           icon: 'gift-outline',
           iconFill: 'gift'
         },
@@ -49,7 +49,7 @@ export default {
         },
         {
           label: 'Account',
-          path: '/',
+          path: '/account',
           name: 'account',
           icon: 'person-outline',
           iconFill: 'person'

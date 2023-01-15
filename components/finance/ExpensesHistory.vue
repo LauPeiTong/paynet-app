@@ -2,6 +2,10 @@
 .expenses-history.pt-4
   v-row.pa-0.ma-0.px-4
     v-col.pa-0.ma-0
+      p.text-h6.font-weight-medium.pt-4.mb-0 Expenses history
+    v-col.pa-0.ma-0.d-flex
+  v-row.pa-0.ma-0.px-4
+    v-col.pa-0.ma-0
       v-item-group.pt-2.pb-8
         template(v-for='item in expenses')
           v-row.px-2.mb-4.mt-0.justify-center

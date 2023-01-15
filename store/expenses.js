@@ -1,10 +1,10 @@
 export const state = () => ({
   currentCategory: null,
   categories: [
-    { id: 0, name: 'Food & Transport', icon: 'layout-outline', color: '#0083BB', amount: 17550, colorName: 'primary' },
-    { id: 1, name: 'Housing & Utilities', icon: 'home-outline', color: '#035172', amount: 35000, colorName: 'tertiary' },
-    { id: 2, name: 'Entertainment', icon: 'film-outline', color: '#C82F2F', amount: 3400, colorName: 'danger' },
-    { id: 3, name: 'Other Expenses', icon: 'grid-outline', color: '#848484', amount: 5400, colorName: 'darkGrey' }
+    { id: 0, name: 'Food & Transport', icon: 'layout-outline', color: '#0083BB', amount: 17550, colorName: 'primary', img: 'Food' },
+    { id: 1, name: 'Housing & Utilities', icon: 'home-outline', color: '#035172', amount: 35000, colorName: 'tertiary', img: 'Housing' },
+    { id: 2, name: 'Entertainment', icon: 'film-outline', color: '#C82F2F', amount: 3400, colorName: 'danger', img: 'Entertainment' },
+    { id: 3, name: 'Other Expenses', icon: 'grid-outline', color: '#848484', amount: 5400, colorName: 'darkGrey', img: 'Other' }
   ],
   expenses: [
     { id: 0, name: 'GrabPay-EC', amount: 1500, category: 0 },
@@ -33,6 +33,26 @@ export const state = () => ({
     { id: 9, name: 'Duitnow LAU SAY HENG', amount: 1500, category: 3 },
     { id: 10, name: 'GrabPay-EC', amount: 1500, category: 3 },
     { id: 11, name: 'ShopeePay Malaysia', amount: 1500, category: 3 }
+  ],
+  food: [
+    { id: 0, name: 'GrabFood', percentage: 20 },
+    { id: 1, name: 'Cafe & Restaurant', percentage: 10 },
+    { id: 2, name: 'ShopeeFood', percentage: 20 },
+    { id: 3, name: 'Petrol', percentage: 40 }
+  ],
+  housing: [
+    { id: 0, name: 'Rent', percentage: 80 },
+    { id: 1, name: 'Water & Electricity Bills', percentage: 20 }
+  ],
+  entertainment: [
+    { id: 0, name: 'Movie', percentage: 10 },
+    { id: 1, name: 'Clothing', percentage: 60 },
+    { id: 2, name: 'Game', percentage: 10 },
+    { id: 3, name: 'Bowling', percentage: 20 }
+  ],
+  other: [
+    { id: 0, name: 'Funds Transfer', percentage: 60 },
+    { id: 0, name: 'Others', percentage: 40 }
   ]
 })
 
@@ -54,6 +74,18 @@ export const getters = {
       return expense.category === state.currentCategory.id
     })
     return list
+  },
+  getFood (state) {
+    return state.food
+  },
+  getHousing (state) {
+    return state.housing
+  },
+  getEntertainment (state) {
+    return state.entertainment
+  },
+  getOther (state) {
+    return state.other
   }
 }
 
