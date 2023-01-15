@@ -4,7 +4,8 @@
     upper-title.ma-0(:title="'Fast Food Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail1()
-    f-button(:label = "'Accept Challenge'")
+    v-row.px-6.pt-2
+      f-button(:label = "'Accept Challenge'")
 </template>
 
 <script>

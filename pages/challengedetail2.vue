@@ -4,7 +4,8 @@
     upper-title.ma-0(:title="'Video Game Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail2()
-    f-button(:label = "'Accept Challenge'" :width = "30")
+    v-row.px-6.pt-2
+      f-button(:label = "'Accept Challenge'" :width = "30")
 </template>
 
 <script>

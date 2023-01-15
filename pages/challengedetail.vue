@@ -4,7 +4,8 @@
     upper-title.ma-0(:title="'Shopping Online Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail()
-    f-button(:label = "'Accept Challenge'" @click="Accepted()")
+    v-row.px-6.pt-2
+      f-button(:label = "'Accept Challenge'" @click="Accepted()")
 </template>
 
 <script>

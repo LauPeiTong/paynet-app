@@ -24,13 +24,26 @@
             v-divider.my-4
             v-list-item-title.mb-2.danger--text.font-weight-bold.text-h5 Remaining: RM 1260.00
   .pb-8
-    v-card.rounded-lg.mt-4.mb-16(outlined)
+    v-card.rounded-lg.mt-4(outlined)
       v-list-item.pt-2(three-line)
         v-list-item-content.pt-0
           v-row
             v-col
             v-col.text-center
               v-img(:src="reward" width="120")
+            v-col
+          v-row.mt-0
+            v-col.text-center
+              p.mb-0.secondary--text.font-weight-bold.text-h5 Get 5000 RHB Points
+              p.darkGrey--text.font-weight-medium If you ach your goal before 2023 Jun
+    v-card.rounded-lg.mt-4.mb-16(outlined)
+      v-list-item.pt-2(three-line)
+        v-list-item-content.pt-0
+          v-list-item-title.mt-3.mb-2.tertiary--text.font-weight-bold.text-h6 Tips for you to reach goal:
+          v-row
+            v-col
+            v-col.text-center
+              v-img(:src="pig" width="120")
             v-col
           v-row.mt-0
             v-col.text-center
@@ -54,7 +67,8 @@ export default {
       selectedIndex: 1,
       progress: 70,
       goal: require('../../assets/finance/Phone.png'),
-      reward: require('../../assets/finance/Reward.png')
+      reward: require('../../assets/finance/Reward.png'),
+      pig: require('../../assets/finance/Pig.png')
     }
   },
   computed: {
