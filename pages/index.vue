@@ -11,7 +11,7 @@ export default {
   layout: 'welcome',
   data () {
     return {
-      logoPath: require('../assets/logo/FincareLogo2.png')
+      logoPath: require('../assets/logo/TEcoPay.png')
     }
   },
   created () {

@@ -30,8 +30,8 @@ export default {
           label: 'Home',
           path: '/home',
           name: 'home',
-          icon: 'briefcase-outline',
-          iconFill: 'briefcase'
+          icon: 'home-outline',
+          iconFill: 'home'
         },
         {
           label: 'Challenge',
@@ -44,15 +44,15 @@ export default {
           label: 'Pay',
           path: '/pay',
           name: 'pay',
-          icon: 'gift-outline',
-          iconFill: 'gift'
+          icon: 'camera-outline',
+          iconFill: 'camera'
         },
         {
           label: 'Donation',
           path: '/donation',
           name: 'donation',
-          icon: 'book-outline',
-          iconFill: 'book'
+          icon: 'star-outline',
+          iconFill: 'star'
         },
         {
           label: 'Account',
