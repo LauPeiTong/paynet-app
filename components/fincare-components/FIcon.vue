@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-btn.fincare-icon(icon :color="buttonColor" :width="width" :height="height" :to="to" :border="border" :class="borderClass")
+v-btn.fincare-icon(icon :color="buttonColor" :width="width" :height="height" :to="to" :border="border" :class="borderClass")
     client-only
       eva-icon(:name="iconName" :fill="iconFill" @click="emitClick" :width="iconWidth" :height="iconHeight")
 </template>

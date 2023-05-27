@@ -1,9 +1,7 @@
 <template lang="pug">
 .category-list
   v-row.pa-0.ma-0.px-4
-    v-col.pa-0.ma-0
-      p.text-h6.font-weight-medium.pt-4.mb-0 Expenses category
-    v-col.pa-0.ma-0.d-flex
+      p.text-h6.font-weight-medium.pt-4.mb-0 Your carbon footprint in a nutshell
 
   v-row.pl-4.mx-0.scroll-x.text-center(:style="scrollSize")
     vue-horizontal-list(
@@ -20,7 +18,7 @@
               eva-icon.mt-2(:name="item.icon" fill="white" width="32" height="32")
               p.mt-3.mb-3.category-text.white--text.font-weight-normal.subtitle-1(v-if="item.name.length <= 13") {{item.name}}
               p.mt-0.mb-2.category-text.white--text.font-weight-normal.subtitle-1(v-else) {{item.name}}
-            p.my-4.category-text.font-weight-medium.text-h6(:class="item.colorName + '--text'") {{ $formatCurrency(item.amount) }}
+            p.my-4.category-text.font-weight-medium.text-h6(:class="item.colorName + '--text'") {{ item.amount.toString() + " kg CO2" }}
 
 </template>
 

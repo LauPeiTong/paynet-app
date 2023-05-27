@@ -11,7 +11,6 @@
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     expenses-chart
     expenses-category
-    expenses-history
 </template>
 
 <script>
@@ -20,15 +19,13 @@ import { mapGetters } from 'vuex'
 import UpperTitle from '../components/UpperTitle.vue'
 import ExpensesChart from '../components/finance/ExpensesChart.vue'
 import ExpensesCategory from '../components/finance/ExpensesCategory.vue'
-import ExpensesHistory from '../components/finance/ExpensesHistory.vue'
 
 export default {
   name: 'ExpensesPage',
   components: {
     UpperTitle,
     ExpensesChart,
-    ExpensesCategory,
-    ExpensesHistory
+    ExpensesCategory
   },
   layout: 'welcome',
   data () {

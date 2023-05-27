@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row.pt-8.pb-6.upper-title(dense :class="titleClass")
+v-row.pt-8.pb-6.upper-title(dense :class="titleClass")
     v-col.text-center(:cols="2")
       f-icon(
         v-if="back === true"

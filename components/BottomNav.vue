@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row.pb-2.pt-3.bottom-nav.bottom-column-content-area(no-gutters)
+v-row.pb-2.pt-3.bottom-nav.bottom-column-content-area(no-gutters)
     v-col.bottom-nav--col.px-0.mx-0(
       v-for="menu in menus"
       :key="`nav-${menu.name}`"

@@ -17,7 +17,7 @@
                 v-list-item-content
                   v-list-item-title.mb-1.secondary--text.font-weight-bold.text-h6 {{item.name}}
                   v-list-item-subtitle.mb-1.primary--text.font-weight-bold.subtitle-1 {{ $formatCurrency(category.amount * (item.percentage / 100.0))}}
-                  v-list-item-subtitle.white--text.mb-0 ccccccccccccccccccccccccccccccccccccccccccc
+                  v-list-item-subtitle.white--text.mb-0 cccccc
                   v-progress-linear.rounded-xl(
                     :value="item.percentage"
                     :color="$vuetify.theme.themes.light.primary"

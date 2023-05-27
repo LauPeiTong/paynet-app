@@ -1,11 +1,14 @@
 <template lang="pug">
 .fill-height.finance-home-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Finance'" :icon="'more-vertical'")
+    upper-title.ma-0(:title="'TEcoPAY'" :icon="'more-vertical'")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     goal-card
-    finance-manage.px-4
-    finance-list.px-4.py-6
+    eco-points
+    expenses-chart
+    expenses-category
+    v-row.pa-0.ma-0.upper-row
+
 </template>
 
 <script>
@@ -13,16 +16,18 @@ import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
 import GoalCard from '../components/finance/GoalCard.vue'
-import FinanceManage from '../components/finance/FinanceManage.vue'
-import FinanceList from '../components/finance/FinanceList.vue'
+import ExpensesChart from '../components/finance/ExpensesChart.vue'
+import EcoPoints from '~/components/finance/EcoPoints.vue'
+import ExpensesCategory from '~/components/finance/ExpensesCategory.vue'
 
 export default {
   name: 'FinancePage',
   components: {
     UpperTitle,
+    EcoPoints,
     GoalCard,
-    FinanceManage,
-    FinanceList
+    ExpensesCategory,
+    ExpensesChart
   },
   layout: 'default',
   data () {

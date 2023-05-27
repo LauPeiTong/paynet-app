@@ -5,13 +5,13 @@
       v-list-item-content.text-center
         v-row.d-flex.flex-row
           v-col.pb-0.text-right(align-self="end")
-            f-icon(:icon-name="'arrow-ios-back-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="")
+            f-icon(:icon-name="'arrow-ios-back-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="selectPreviousMonth")
           v-col.pb-0
             v-list-item-title.secondary--text.font-weight-bold.text-h5.mt-2 {{ months[selectedIndex] }}
           v-col.pb-0.text-left.align-bottom(align-self="end")
-            f-icon(:icon-name="'arrow-ios-forward-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="")
-        v-list-item-subtitle.subtitle-1.darkGrey--text Monthly Expenses
-        ApexCharts.d-flex.justify-space-around(type="donut" :options="chartOptions" :series="series" width="320" height="320")
+            f-icon(:icon-name="'arrow-ios-forward-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="selectNextMonth")
+        v-list-item-subtitle.subtitle-1.darkGrey--text Monthly CO2 Emission
+        ApexCharts.d-flex.justify-space-around(type="donut" :options="chartOptions" :series="series[this.selectedIndex]" width="320" height="320")
 </template>
 
 <script>
@@ -28,8 +28,8 @@ export default {
   data () {
     return {
       selectedIndex: 1,
-      months: ['2022 Dec', '2023 Jan', '2023 Feb', '2023 Mar'],
-      series: [175.5, 350, 34, 57],
+      months: ['2023 Apr', '2023 May', '2023 June'],
+      series: [[100, 200, 300], [175.5, 350, 340], [200, 400, 100]],
       chartOptions: {
         chart: {
           type: 'donut'
@@ -37,8 +37,8 @@ export default {
         legend: {
           show: false
         },
-        labels: ['Food & Transportation', 'Housing & Utilities', 'Entertainment', 'Other Expenses'],
-        colors: ['#0083BB', '#035172', '#C82F2F', '#848484'],
+        labels: ['Food', 'Transport', 'Product'],
+        colors: ['#0083BB', '#035172', '#C82F2F'],
         plotOptions: {
           pie: {
             expandOnClick: true,
@@ -53,16 +53,12 @@ export default {
                   fontWeight: '600',
                   formatter: function (value) {
                     const t = value.globals.series.reduce((a, b) => a + b, 0)
-                    return new Intl.NumberFormat('en-US', {
-                      style: 'currency',
-                      currency: 'MYR',
-                      currencyDisplay: 'narrowSymbol'
-                    }).format(t)
+                    return t.toString() + ' kg CO2'
                   }
                 },
                 value: {
                   color: '#0083BB',
-                  fontSize: '28px',
+                  fontSize: '25px',
                   fontWeight: '600'
                 }
               }
@@ -92,6 +88,20 @@ export default {
     })
   },
   methods: {
+    getData () {
+      return [[100, 200, 300], [175.5, 350, 340], [200, 400, 100]]
+    },
+    setData (selectedIndex) {
+      this.selectedData = this.selectedIndex
+    },
+    selectPreviousMonth () {
+      // Decrease the selected index and handle wrap-around
+      this.selectedIndex = (this.selectedIndex - 1 + this.months.length) % this.months.length
+    },
+    selectNextMonth () {
+      // Increase the selected index and handle wrap-around
+      this.selectedIndex = (this.selectedIndex + 1) % this.months.length
+    },
     ...mapActions({
     })
   }

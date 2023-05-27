@@ -2,14 +2,14 @@
 .finance-mange
   v-row.pa-0.ma-0
     v-col.pa-0.ma-0
-      p.text-h6.font-weight-bold.pt-6.mb-0.secondary--text Manage your money
-
+      p.text-h6.font-weight-bold.pt-6.mb-0.secondary--text Your carbon fo
+      v-row.pa-0.ma-0.upper-row
   v-row.mt-0
     v-col.pr-1(:cols="6")
       f-card.d-flex.flex-column(
         @click="goToExpensesPage"
         :height="150"
-        :label="'Expenses'"
+        :label="'Carbon '"
         :label2="'Track your expenses history'"
         :color="$vuetify.theme.themes.light.tertiary"
       )
