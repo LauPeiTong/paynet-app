@@ -1,22 +1,36 @@
 <template lang="pug">
-  .pay-page
-    qrcode-stream(:camera="camera" @decode="onDecode" @init="onInit")
-      .validation-success(v-if="validationSuccess")
-        span This is a URL
+  .pay-page.fill-height
+    upper-title.pay-title.ma-0(:titleClass="'white-text'" :title="'QR Code'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
+    v-row.focus.pa-0.ma-0.d-flex.justify-center.align-center
+      v-row.focus-area.justify-center
+        qrcode-stream(:camera="camera" @decode="onDecode" @init="onInit")
+          .validation-success(v-if="validationSuccess")
+            span This is a URL
 
-      .validation-failure(v-if="validationFailure")
-        span This is NOT a URL!
+          .validation-failure(v-if="validationFailure")
+            span This is NOT a URL!
 
-      .validation-pending(v-if="validationPending")
-        span Long validation in progress...
+          .validation-pending(v-if="validationPending")
+            span Long validation in progress...
+        p.mt-3.white--text Place the QR in the Scan Area
+
+    qrcode-stream(:camera="camera")
+    v-row.px-0.ma-0.py-16.d-flex.justify-center.align-center.camera-button
+      f-icon(
+        :icon-name="'camera'"
+        :icon-fill="'white'"
+        @click=""
+      )
+
 </template>
 
 <script>
+import FIcon from '../components/fincare-components/FIcon.vue'
 
 export default {
-
-  components: { },
-
+  name: 'PayPage',
+  components: { FIcon },
+  layout: 'welcome',
   data () {
     return {
       isValid: undefined,
@@ -40,17 +54,14 @@ export default {
   },
 
   methods: {
-
     onInit (promise) {
       promise
         .catch(console.error)
         .then(this.resetValidationState)
     },
-
     resetValidationState () {
       this.isValid = undefined
     },
-
     async onDecode (content) {
       this.result = content
       this.turnCameraOff()
@@ -64,25 +75,25 @@ export default {
 
       this.turnCameraOn()
     },
-
     turnCameraOn () {
       this.camera = 'auto'
     },
-
     turnCameraOff () {
       this.camera = 'off'
     },
-
     timeout (ms) {
       return new Promise((resolve) => {
         window.setTimeout(resolve, ms)
       })
+    },
+    goBackToPreviousPage () {
+      this.$router.go(-1)
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .validation-success,
 .validation-failure,
 .validation-pending {
@@ -106,4 +117,41 @@ export default {
 .validation-failure {
   color: red;
 }
+
+.pay-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.focus{
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+
+.focus-area {
+  height: 250px;
+  max-width: 250px;
+  border: 6px solid #fff;
+  border-radius: 30px;
+}
+
+.camera-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+:deep(.qrcode-stream-camera), :deep(.qrcode-stream-overlay), :deep(.qrcode-stream-wrapper) {
+  border-radius: 24px !important;
+}
+
 </style>

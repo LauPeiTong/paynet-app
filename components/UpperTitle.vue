@@ -62,14 +62,14 @@ export default {
     ...mapGetters({
     }),
     textColor () {
-      if (this.titleClass === 'dark-background') {
+      if (this.titleClass === 'dark-background' || this.titleClass === 'white-text') {
         return 'white--text'
       } else {
         return 'secondary--text'
       }
     },
     iconColor () {
-      if (this.titleClass === 'dark-background') {
+      if (this.titleClass === 'dark-background' || this.titleClass === 'white-text') {
         return 'white'
       } else {
         return 'primary'
@@ -100,5 +100,9 @@ export default {
 
 .dark-background {
   background-color: #333333;
+}
+
+.transparent-background {
+  background: transparent;
 }
 </style>
