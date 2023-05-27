@@ -15,6 +15,7 @@
       :size="70"
       :width="7"
       indeterminate
+      color="primary"
     )
 </template>
 

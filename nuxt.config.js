@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - App for financial literacy',
-    title: 'Fincare',
+    titleTemplate: '%s - App for digital payment and environment',
+    title: 'TEcoPay',
     htmlAttrs: {
       lang: 'en'
     },
@@ -21,7 +21,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/FincareLogo.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/tecopayLogo.png' }
     ]
   },
 

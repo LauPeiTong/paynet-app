@@ -1,22 +1,31 @@
 <template lang="pug">
 .card-challenge.px-4
-  v-card.rounded-lg(outlined)
+  v-card.rounded-xl.lightBlue(outlined)
+    v-img.mx-auto.mt-2(:src="tree" max-width="280")
+    p.text-h4.font-weight-bold.primary--text.text-center LEVEL 14
+  .d-flex.align-center.justify-center.mt-4
+    p.font-weight-medium.text-h6.mb-0.mr-2 Completed Challenges: 6 / 56
+    eva-icon(name="checkmark-circle" :fill="$vuetify.theme.themes.light.green")
+  v-progress-linear.rounded-xl(
+    :value="67.5"
+    :color="$vuetify.theme.themes.light.green"
+    height="30"
+  )
+    template(v-slot:default="{ value }")
+      strong.white--text {{ Math.ceil(value) }}% to Level 15
+  v-card.rounded-lg.mt-4(outlined)
     v-list-item.pt-2(three-line)
       v-list-item-avatar(size="60" tile)
-        v-img(:src="challenge")
+        v-img(:src="coins")
       v-list-item-content
         v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
         v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
     v-divider.mx-4
     v-list-item
-      v-list-item-title.darkGrey--text.font-weight-medium.text-h6 Your level: 14
-      eva-icon.mt-2(name="flag-outline" :fill="$vuetify.theme.themes.light.darkGrey")
-    v-divider.mx-4
-    v-list-item
       v-list-item-title.font-weight-medium.text-h6
         |
-        a.success--text(@click="goToVoucherPage()") Redeem your vouchers
-      eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.success")
+        a.orange--text(@click="goToVoucherPage()") Redeem your vouchers
+      eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.orange")
   v-row.pa-0.ma-0
     v-col.pa-0.ma-0
       p.text-h6.font-weight-bold.pt-6.mb-0.secondary--text Challenges
@@ -56,22 +65,16 @@ export default {
   },
   data () {
     return {
-      challenge: require('../../assets/img/challenge.png'),
+      coins: require('../../assets/img/coins.png'),
+      tree: require('../../assets/img/tree.png'),
       posts: [
         {
           id: 1,
           title: '(50 points)',
-<<<<<<< Updated upstream
           img: 'donation',
           challenge: 'Dontion Challenge',
           content: 'Make a donation of RM 50 to Environmental NGO',
           accept: 'Completed'
-=======
-          img: 'fastfood',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Fast Food expenses by 30%'
-
->>>>>>> Stashed changes
         },
         {
           id: 2,
@@ -83,16 +86,6 @@ export default {
         },
         {
           id: 3,
-<<<<<<< Updated upstream
-=======
-          title: '(80 points)',
-          img: 'game',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Entertainment expense by 40%'
-        },
-        {
-          id: 4,
->>>>>>> Stashed changes
           title: '(30 points)',
           img: 'receipt',
           challenge: 'No Plastic Bag Challenge',

@@ -1,5 +1,5 @@
 export const state = () => ({
-  currentPath: 'finance'
+  currentPath: 'home'
 })
 
 export const getters = {

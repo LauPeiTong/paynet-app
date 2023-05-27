@@ -21,7 +21,7 @@ import EcoPoints from '~/components/finance/EcoPoints.vue'
 import ExpensesCategory from '~/components/finance/ExpensesCategory.vue'
 
 export default {
-  name: 'FinancePage',
+  name: 'HomePage',
   components: {
     UpperTitle,
     EcoPoints,
