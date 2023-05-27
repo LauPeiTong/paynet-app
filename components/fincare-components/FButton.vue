@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-btn.wecan-button.text-none.rounded-lg(
+v-btn.wecan-button.text-none.rounded-lg(
     elevation="0"
     :block="block"
     :dark="dark"

@@ -4,6 +4,8 @@
     upper-title.ma-0(:title="'Challenge'" :icon="'more-vertical'")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeAcceptedVue
+    v-row.px-6.pt-2
+      f-button(:label = "'Accept Challenge'")
 </template>
 
 <script>

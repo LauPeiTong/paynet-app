@@ -5,7 +5,7 @@
       v-list-item-avatar(size="60" tile)
         v-img(:src="challenge")
       v-list-item-content
-        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total RHB Points:
+        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
         v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
     v-divider.mx-4
     v-list-item
@@ -15,7 +15,7 @@
     v-list-item
       v-list-item-title.font-weight-medium.text-h6
         |
-        a.success--text(@click="goToVoucherPage()") Get your vouchers
+        a.success--text(@click="goToVoucherPage()") Redeem your vouchers
       eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.success")
   v-row.pa-0.ma-0
     v-col.pa-0.ma-0
@@ -35,6 +35,7 @@
                 p.pt-2.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
                 p.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
                 p.pt-5.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
+                p.pt-6.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.accept, 300) }}
   .pb-16
   .pb-4
 </template>
@@ -60,34 +61,36 @@ export default {
         {
           id: 1,
           title: '(80 points)',
-          img: 'shopping',
+          img: 'ironcup',
           challenge: 'Take a Challenge',
-          content: 'Reduce your Online Shopping expense by 30%',
-          label: 'Accepted'
+          content: 'Use iron cup to buy drinks',
+          accept: 'Accepted'
+
         },
         {
           id: 2,
           title: '(50 points)',
-          img: 'fastfood',
+          img: 'recyclebag',
           challenge: 'Take a Challenge',
-          content: 'Reduce your fast food expenses by 30%',
-          label: 'Accept now'
+          content: 'Use recycle bag while takeaway',
+          accept: 'Accept Now'
+
         },
         {
           id: 3,
-          title: '(100 points)',
-          img: 'game',
+          title: '(60 points)',
+          img: 'plasticcup',
           challenge: 'Take a Challenge',
-          content: 'Reduce your entertainment expenses by 40%',
-          label: 'Accept now'
+          content: 'Do not use plastic cup while having hot drinks',
+          accept: 'Accept Now'
         },
         {
           id: 4,
-          title: '(10 points)',
-          img: 'investment',
+          title: '(30 points)',
+          img: 'receipt',
           challenge: 'Daily Challenge',
-          content: 'Investment Pop Quiz',
-          label: 'Accept now'
+          content: 'Do not request for receipt and plastic bag after purchased',
+          accept: 'Accept Now'
         }
 
       ]
@@ -118,7 +121,7 @@ export default {
       } else if (id === 3) {
         this.$router.push('/challengedetail2')
       } else {
-        this.$router.push('/quiz')
+        this.$router.push('/challengedetail3')
       }
     },
     goToVoucherPage () {
