@@ -5,10 +5,10 @@
       v-row.focus-area.justify-center
         qrcode-stream(:camera="camera" @decode="onDecode" @init="onInit")
           .validation-success(v-if="validationSuccess")
-            span This is a URL
+            span Processing
 
           .validation-failure(v-if="validationFailure")
-            span This is NOT a URL!
+            span Payment Failed
 
           .validation-pending(v-if="validationPending")
             span Long validation in progress...
@@ -16,11 +16,14 @@
 
     qrcode-stream(:camera="camera")
     v-row.px-0.ma-0.py-16.d-flex.justify-center.align-center.camera-button
-      f-icon(
-        :icon-name="'camera'"
-        :icon-fill="'white'"
-        @click=""
-      )
+      v-card.rounded-xl.primary.pa-4
+        f-icon(
+          :icon-name="'camera'"
+          :icon-fill="'white'"
+          :width="36"
+          :height="36"
+          @click=""
+        )
 
 </template>
 
@@ -45,6 +48,9 @@ export default {
     },
 
     validationSuccess () {
+      if (this.isValid === true) {
+        this.goToPaymentPage()
+      }
       return this.isValid === true
     },
 
@@ -88,6 +94,9 @@ export default {
     },
     goBackToPreviousPage () {
       this.$router.go(-1)
+    },
+    goToPaymentPage () {
+      this.$router.push('/payment')
     }
   }
 }
