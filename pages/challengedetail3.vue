@@ -3,7 +3,7 @@
   v-row.pa-0.ma-0.upper-row
     upper-title.ma-0(:title="'Recycle Bag Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
-    ChallengeDetail1()
+    ChallengeDetail3()
     v-row.px-6.pt-2
       f-button(:label = "'Accept Challenge'" @click="Accepted()")
 </template>
@@ -12,14 +12,14 @@
 import { mapGetters } from 'vuex'
 
 import UpperTitle from '../components/UpperTitle.vue'
-import ChallengeDetail1 from '~/components/goal/ChallengeDetail1.vue'
+import ChallengeDetail3 from '~/components/goal/ChallengeDetail3.vue'
 import FButton from '~/components/fincare-components/FButton.vue'
 
 export default {
-  name: 'ChallengePage1',
+  name: 'ChallengePage3',
   components: {
     UpperTitle,
-    ChallengeDetail1,
+    ChallengeDetail3,
     FButton
   },
   layout: 'welcome',

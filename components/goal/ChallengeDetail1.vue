@@ -30,7 +30,7 @@
             v-row
               v-col
                 p.pt-2.mb-0.font-weight-bold.subtitle-2.secondary--text.text-justify {{ $strLimit("Terms and condition: ", 300) }}
-                p.pt-2.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit("1. Fincare reserves right to change/cancel terms and conditions of this challenge at any time.", 300) }}
+                p.pt-2.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit("1. TECoPAY reserves right to change/cancel terms and conditions of this challenge at any time.", 300) }}
                 p.pt-2.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit("2. You may enter multiple challenges at a time.", 300) }}
 </template>
 
@@ -62,10 +62,10 @@ export default {
         {
           id: 2,
           title: '(50 points)',
-          img: 'fastfood',
+          img: 'recyclebag',
           challenge: 'Take a Challenge',
-          content: 'Reduce your fast food expenses by 30%',
-          information: 'Last Statement cycle you have spent RM 120.00 on Fast Food. Take a challenge to reduce your Fast Food to RM 90.00 or less by next statement cycle.'
+          content: 'Use recycle bag while takeaway',
+          information: 'People always use recycle bag to pack stuffs. You are encouraged to use recycle bag to pack things.'
 
         }
         // {
@@ -74,6 +74,14 @@ export default {
         //   img: 'game',
         //   challenge: 'Take a Challenge',
         //   content: 'Reduce your entertainment expenses by 40%'
+        // }
+        // {
+        //   id: 4,
+        //   title: '(30 points)',
+        //   img: 'receipt',
+        //   challenge: 'Daily Challenge',
+        //   content: 'Do not request for receipt and plastic bag after purchased',
+        //   information: 'You are being assigned not to reuest plastic bag but e-receipt.'
         // }
 
       ]

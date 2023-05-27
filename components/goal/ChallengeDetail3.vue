@@ -67,22 +67,22 @@ export default {
         //   content: 'Reduce your fast food expenses by 30%'
 
         // },
-        {
-          id: 3,
-          title: '(60 points)',
-          img: 'plasticcup',
-          challenge: 'Take a Challenge',
-          content: 'Do not use plastic cup while having hot drinks',
-          information: 'You are being assigned not to use plastic cup while having hot drinks to reduce waste.'
-        }
         // {
-        //   id: 4,
-        //   title: '(30 points)',
-        //   img: 'receipt',
-        //   challenge: 'Daily Challenge',
-        //   content: 'Do not request for receipt and plastic bag after purchased',
-        //   information: 'You are being assigned not to reuest plastic bag but e-receipt.'
+        //   id: 3,
+        //   title: '(60 points)',
+        //   img: 'plasticcup',
+        //   challenge: 'Take a Challenge',
+        //   content: 'Do not use plastic cup while having hot drinks',
+        //   information: 'You are being assigned not to use plastic cup while having hot drinks to reduce waste.'
         // }
+        {
+          id: 4,
+          title: '(30 points)',
+          img: 'receipt',
+          challenge: 'Daily Challenge',
+          content: 'Do not request for receipt and plastic bag after purchased',
+          information: 'You are being assigned not to request plastic bag but e-receipt.'
+        }
 
       ]
     }

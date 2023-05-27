@@ -1,7 +1,7 @@
 <template lang="pug">
 .fill-height.goal-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Shopping Online Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
+    upper-title.ma-0(:title="'Iron Cup Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail()
     v-row.px-6.pt-2
@@ -10,20 +10,16 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
-import UpperTitle from '../components/UpperTitle.vue'
 import ChallengeDetail from '~/components/goal/ChallengeDetail.vue'
 import FButton from '~/components/fincare-components/FButton.vue'
-
 export default {
-  name: 'ChallengePage',
-  components: {
-    UpperTitle,
-    ChallengeDetail,
-    FButton
-  },
-  layout: 'welcome',
-  data () {
+name: 'ChallengePage',
+components: {
+ChallengeDetail,
+FButton
+},
+layout: 'welcome',
+data () {
     return {
       search: null
     }

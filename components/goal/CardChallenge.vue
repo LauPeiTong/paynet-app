@@ -5,7 +5,7 @@
       v-list-item-avatar(size="60" tile)
         v-img(:src="challenge")
       v-list-item-content
-        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total RHB Points:
+        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
         v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
     v-divider.mx-4
     v-list-item
@@ -15,7 +15,7 @@
     v-list-item
       v-list-item-title.font-weight-medium.text-h6
         |
-        a.success--text(@click="goToVoucherPage()") Get your vouchers
+        a.success--text(@click="goToVoucherPage()") Redeem your vouchers
       eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.success")
   v-row.pa-0.ma-0
     v-col.pa-0.ma-0
@@ -60,32 +60,32 @@ export default {
         {
           id: 1,
           title: '(80 points)',
-          img: 'shopping',
+          img: 'ironcup',
           challenge: 'Take a Challenge',
-          content: 'Reduce your Online Shopping expense by 30%'
+          content: 'Use iron cup to buy drinks'
 
         },
         {
           id: 2,
           title: '(50 points)',
-          img: 'fastfood',
+          img: 'recyclebag',
           challenge: 'Take a Challenge',
-          content: 'Reduce your fast food expenses by 30%'
+          content: 'Use recycle bag while takeaway'
 
         },
         {
           id: 3,
-          title: '(100 points)',
-          img: 'game',
+          title: '(60 points)',
+          img: 'plasticcup',
           challenge: 'Take a Challenge',
-          content: 'Reduce your entertainment expenses by 40%'
+          content: 'Do not use plastic cup while having hot drinks'
         },
         {
           id: 4,
-          title: '(10 points)',
-          img: 'investment',
+          title: '(30 points)',
+          img: 'receipt',
           challenge: 'Daily Challenge',
-          content: 'Investment Pop Quiz'
+          content: 'Do not request for receipt and plastic bag after purchased'
         }
 
       ]

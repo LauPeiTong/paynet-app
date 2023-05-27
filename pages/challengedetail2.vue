@@ -1,11 +1,11 @@
 <template lang="pug">
 .fill-height.goal-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Video Game Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
+    upper-title.ma-0(:title="'No Plastic Cup Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail2()
     v-row.px-6.pt-2
-      f-button(:label = "'Accept Challenge'" :width = "30")
+      f-button(:label = "'Accept Challenge'" @click="Accepted()")
 </template>
 
 <script>
@@ -16,7 +16,7 @@ import ChallengeDetail2 from '~/components/goal/ChallengeDetail2.vue'
 import FButton from '~/components/fincare-components/FButton.vue'
 
 export default {
-  name: 'ChallengePage',
+  name: 'ChallengePage2',
   components: {
     UpperTitle,
     ChallengeDetail2,
@@ -39,6 +39,9 @@ export default {
     },
     goBackToPreviousPage () {
       this.$router.go(-1)
+    },
+    Accepted () {
+      this.$router.push('/challengeaccepted')
     }
   }
 }
