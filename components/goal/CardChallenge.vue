@@ -61,10 +61,17 @@ export default {
         {
           id: 1,
           title: '(50 points)',
+<<<<<<< Updated upstream
           img: 'donation',
           challenge: 'Dontion Challenge',
           content: 'Make a donation of RM 50 to Environmental NGO',
           accept: 'Completed'
+=======
+          img: 'fastfood',
+          challenge: 'Take a Challenge',
+          content: 'Reduce your Fast Food expenses by 30%'
+
+>>>>>>> Stashed changes
         },
         {
           id: 2,
@@ -76,6 +83,16 @@ export default {
         },
         {
           id: 3,
+<<<<<<< Updated upstream
+=======
+          title: '(80 points)',
+          img: 'game',
+          challenge: 'Take a Challenge',
+          content: 'Reduce your Entertainment expense by 40%'
+        },
+        {
+          id: 4,
+>>>>>>> Stashed changes
           title: '(30 points)',
           img: 'receipt',
           challenge: 'No Plastic Bag Challenge',

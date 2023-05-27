@@ -5,9 +5,10 @@
       upper-title.ma-0( :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
     .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
       DonationDetail1()
-      donation-payment
+
       v-row.px-6.pt-2
-        f-button(:label = "'Make Donation'" @click="Accepted()")
+        donation-payment
+        //- f-button(:label = "'Make Donation'" @click="Accepted()")
 
         //- DonationPayment()
 
