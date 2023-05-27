@@ -1,95 +1,47 @@
-<template lang="pug">
-  v-row(justify="space-around")
-    v-col(cols="auto")
-      v-dialog(transition="dialog-bottom-transition" width="auto")
-        template(v-slot:activator="{ props }")
-          v-btn(color="primary", v-bind="props")
-            | From the bottom
-        template(v-slot:default="{ isActive }")
-          v-card
-            v-toolbar(color="primary", title="Opening from the bottom")
-            v-card-text
-              div.text-h2.pa-12 Hello world!
-            v-card-actions(class="justify-end")
-              v-btn(variant="text", @click="isActive.value = false")
-                | Close
-    v-col(cols="auto")
-      v-dialog(transition="dialog-top-transition" width="auto")
-        template(v-slot:activator="{ props }")
-          v-btn(color="primary", v-bind="props")
-            | From the top
-        template(v-slot:default="{ isActive }")
-          v-card
-            v-toolbar(color="primary", title="Opening from the top")
-            v-card-text
-              div.text-h2.pa-12 Hello world!
-            v-card-actions(class="justify-end")
-              v-btn(variant="text", @click="isActive.value = false")
-                | Close
-</template>
-
-<!-- <template>
+<template>
   <v-row justify="space-around">
     <v-col cols="auto">
       <v-dialog
         transition="dialog-bottom-transition"
-        width="auto"
+        max-width="600"
       >
-        <template v-slot:activator="{ props }">
+        <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="primary"
-            v-bind="props"
+            v-bind="attrs"
+            v-on="on"
           >From the bottom</v-btn>
         </template>
-        <template v-slot:default="{ isActive }">
+        <template v-slot:default="dialog">
           <v-card>
             <v-toolbar
               color="primary"
-              title="Opening from the bottom"
-            ></v-toolbar>
+              dark
+            >Choose an amount to donate:</v-toolbar>
             <v-card-text>
               <div class="text-h2 pa-12">Hello world!</div>
+              <input type="number" v-model="numberInput">
             </v-card-text>
-            <v-card-actions class="justify-end">
+            <v-card-actions class="justify-center">
               <v-btn
-                variant="text"
-                @click="isActive.value = false"
-              >Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </template>
-      </v-dialog>
-    </v-col>
+                color="primary"
+                @click="dialog.value = false"
+              >Proceed To Pay</v-btn>
 
-    <v-col cols="auto">
-      <v-dialog
-        transition="dialog-top-transition"
-        width="auto"
-      >
-        <template v-slot:activator="{ props }">
-          <v-btn
-            color="primary"
-            v-bind="props"
-          >From the top</v-btn>
-        </template>
-        <template v-slot:default="{ isActive }">
-          <v-card>
-            <v-toolbar
-              color="primary"
-              title="Opening from the top"
-            ></v-toolbar>
-            <v-card-text>
-              <div class="text-h2 pa-12">Hello world!</div>
-            </v-card-text>
-            <v-card-actions class="justify-end">
-              <v-btn
-                variant="text"
-                @click="isActive.value = false"
-              >Close</v-btn>
             </v-card-actions>
           </v-card>
         </template>
       </v-dialog>
     </v-col>
   </v-row>
-</template> -->
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      numberInput: ''
+    }
+  }
+}
+</script>

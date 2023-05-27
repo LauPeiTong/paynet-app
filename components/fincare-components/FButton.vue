@@ -17,7 +17,7 @@ v-btn.wecan-button.text-none.rounded-lg(
       .d-flex.flex-column.px-2.align-center(v-else)
         .btn-icon.mr-3(v-if="iconName")
           eva-icon(:name="iconName" :fill="disabled? '#C1C1C1' : iconFill")
-        span {{label}}
+        span.subtitle-1 {{label}}
       .right-action
         slot(name="action")
 

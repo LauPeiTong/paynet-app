@@ -13,13 +13,13 @@ import { mapGetters } from 'vuex'
 import ChallengeDetail from '~/components/goal/ChallengeDetail.vue'
 import FButton from '~/components/fincare-components/FButton.vue'
 export default {
-name: 'ChallengePage',
-components: {
-ChallengeDetail,
-FButton
-},
-layout: 'welcome',
-data () {
+  name: 'ChallengePage',
+  components: {
+    ChallengeDetail,
+    FButton
+  },
+  layout: 'welcome',
+  data () {
     return {
       search: null
     }

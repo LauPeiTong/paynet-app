@@ -47,7 +47,7 @@ export default {
     },
     borderClass () {
       if (this.border) {
-        return 'woreer-icon-border pt-1'
+        return 'fincare-icon-border pt-1'
       } else {
         return ''
       }
