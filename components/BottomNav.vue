@@ -27,9 +27,9 @@ export default {
     return {
       menus: [
         {
-          label: 'Finance',
-          path: '/finance',
-          name: 'finance',
+          label: 'Home',
+          path: '/home',
+          name: 'home',
           icon: 'briefcase-outline',
           iconFill: 'briefcase'
         },
@@ -41,9 +41,16 @@ export default {
           iconFill: 'gift'
         },
         {
-          label: 'Learning',
-          path: '/learning',
-          name: 'learning',
+          label: 'Pay',
+          path: '/pay',
+          name: 'pay',
+          icon: 'gift-outline',
+          iconFill: 'gift'
+        },
+        {
+          label: 'Donation',
+          path: '/donation',
+          name: 'donation',
           icon: 'book-outline',
           iconFill: 'book'
         },
