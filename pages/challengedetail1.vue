@@ -1,7 +1,7 @@
 <template lang="pug">
 .fill-height.goal-page.pa-0.ma-0
   v-row.pa-0.ma-0.upper-row
-    upper-title.ma-0(:title="'Recycle Bag Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
+    upper-title.ma-0(:title="'GoGreen Challenge'" :icon="'more-vertical'" @goBack="goBackToPreviousPage" :back="true")
   .scroll.scrollbar-hide.ma-0.justify-top.align-center(:style="scrollSize")
     ChallengeDetail1()
     v-row.px-6.pt-2

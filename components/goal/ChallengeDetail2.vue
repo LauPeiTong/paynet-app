@@ -69,11 +69,11 @@ export default {
         // },
         {
           id: 3,
-          title: '(60 points)',
-          img: 'plasticcup',
+          title: '(80 points)',
+          img: 'game',
           challenge: 'Take a Challenge',
-          content: 'Do not use plastic cup while having hot drinks',
-          information: 'You are being assigned not to use plastic cup while having hot drinks to reduce waste.'
+          content: 'Reduce your Entertainment expense by 40%',
+          information: 'Your last statement stated that you have spent Rm420, you have to decrease it to below Rm252 to complete this challenge'
         }
         // {
         //   id: 4,

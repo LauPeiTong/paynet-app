@@ -51,12 +51,11 @@ export default {
       posts: [
         {
           id: 1,
-          title: '(80 points)',
-          img: 'ironcup',
+          title: '(50 points)',
+          img: 'fastfood',
           challenge: 'Take a Challenge',
-          content: 'Use iron cup to buy drinks',
-          information: 'People are using plastic to buy drinks, start encourage yourself to use your own iron cup to buy drinks.'
-
+          content: 'Reduce your Fast Food expenses by 30%',
+          information: 'Your last statement for fast food expenses are Rm200, you have to reduce it to below Rm140 to complete this challenge'
         }
         // {
         //   id: 2,
@@ -79,7 +78,7 @@ export default {
         //   img: 'receipt',
         //   challenge: 'Daily Challenge',
         //   content: 'Do not request for receipt and plastic bag after purchased',
-        //   information: 'You are being assigned not to reuest plastic bag but e-receipt.'
+        //   information: 'You are being assigned not to request plastic bag but e-receipt.'
         // }
 
       ]

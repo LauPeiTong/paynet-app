@@ -64,8 +64,8 @@ export default {
           title: '(50 points)',
           img: 'recyclebag',
           challenge: 'Take a Challenge',
-          content: 'Use recycle bag while takeaway',
-          information: 'People always use recycle bag to pack stuffs. You are encouraged to use recycle bag to pack things.'
+          content: 'Support GoGreen by using recycle bag instead of plastic bag.',
+          information: 'Take a challenge to show that you bought gogreen product to complete this challenge.'
 
         }
         // {
