@@ -59,10 +59,10 @@ export default {
       posts: [
         {
           id: 1,
-          title: '(80 points)',
-          img: 'ironcup',
+          title: '(50 points)',
+          img: 'fastfood',
           challenge: 'Take a Challenge',
-          content: 'Use iron cup to buy drinks'
+          content: 'Reduce your Fast Food expenses by 30%',
 
         },
         {
@@ -70,22 +70,23 @@ export default {
           title: '(50 points)',
           img: 'recyclebag',
           challenge: 'Take a Challenge',
-          content: 'Use recycle bag while takeaway'
+          content: 'Support GoGreen by using recycle bag instead of plastic bag.',
+          information: 'Take a challenge to show that you bought gogreen product to complete this challenge'
 
         },
         {
           id: 3,
-          title: '(60 points)',
-          img: 'plasticcup',
+          title: '(80 points)',
+          img: 'game',
           challenge: 'Take a Challenge',
-          content: 'Do not use plastic cup while having hot drinks'
+          content: 'Reduce your Entertainment expense by 40%',
         },
         {
           id: 4,
           title: '(30 points)',
-          img: 'receipt',
+          img: 'shopping',
           challenge: 'Daily Challenge',
-          content: 'Do not request for receipt and plastic bag after purchased'
+          content: 'Do not request for receipt after purchased but e-receipt'
         }
 
       ]

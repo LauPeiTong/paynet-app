@@ -32,13 +32,13 @@ export default {
   data () {
     return {
       vouchers: [
-        { id: 0, name: 'RM10 in-store voucher', company: '99 Speedmart', points: 2500, img: '99speedmart' },
-        { id: 1, name: 'RM10 in-store voucher', company: 'Aeon', points: 5000, img: 'aeon' },
-        { id: 2, name: 'RM5 off BananaBro', company: 'BananaBro', points: 2000, img: 'bananabro' },
-        { id: 3, name: 'RM10 off Family Mart', company: 'Family Mart', points: 4000, img: 'familymart' },
-        { id: 4, name: 'RM10 in-store voucher', company: 'MyNews', points: 5000, img: 'mynews' },
-        { id: 5, name: 'RM10 in-store voucher', company: 'Secret Recipe', points: 5000, img: 'secretrecipe' },
-        { id: 6, name: 'RM10 in-store voucher', company: 'Sushi King', points: 5000, img: 'sushiking' }
+        { id: 0, name: 'RM10 in-store voucher', company: '99 Speedmart', points: 500, img: '99speedmart' },
+        { id: 1, name: 'RM10 in-store voucher', company: 'Aeon', points: 500, img: 'aeon' },
+        { id: 2, name: 'RM5 off BananaBro', company: 'BananaBro', points: 350, img: 'bananabro' },
+        { id: 3, name: 'RM10 off Family Mart', company: 'Family Mart', points: 600, img: 'familymart' },
+        { id: 4, name: 'RM10 in-store voucher', company: 'MyNews', points: 450, img: 'mynews' },
+        { id: 5, name: 'RM10 in-store voucher', company: 'Secret Recipe', points: 550, img: 'secretrecipe' },
+        { id: 6, name: 'RM10 in-store voucher', company: 'Sushi King', points: 600, img: 'sushiking' }
       ]
     }
   },

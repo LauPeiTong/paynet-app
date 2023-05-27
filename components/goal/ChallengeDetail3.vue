@@ -80,8 +80,8 @@ export default {
           title: '(30 points)',
           img: 'receipt',
           challenge: 'Daily Challenge',
-          content: 'Do not request for receipt and plastic bag after purchased',
-          information: 'You are being assigned not to request plastic bag but e-receipt.'
+          content: 'Do not request for receipt after purchased but e-receipt',
+          information: 'You are only able to request and receive e-receipt'
         }
 
       ]
