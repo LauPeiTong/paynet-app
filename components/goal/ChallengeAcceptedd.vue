@@ -6,7 +6,7 @@
         v-img(:src="challenge")
       v-list-item-content
         v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
-        v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
+        v-list-item-subtitle.font-weight-bold.text-h4.primary--text 700
     v-divider.mx-4
     v-list-item
       v-list-item-title.darkGrey--text.font-weight-medium.text-h6 Your level: 14
