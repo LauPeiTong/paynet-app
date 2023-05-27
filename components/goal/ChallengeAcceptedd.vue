@@ -60,37 +60,27 @@ export default {
       posts: [
         {
           id: 1,
-          title: '(80 points)',
-          img: 'ironcup',
-          challenge: 'Take a Challenge',
-          content: 'Use iron cup to buy drinks',
-          accept: 'Accepted'
-
+          title: '(50 points)',
+          img: 'donation',
+          challenge: 'Donation Challenge',
+          content: 'Make a donation of RM 50 to Environmental NGO',
+          accept: 'Completed'
         },
         {
           id: 2,
-          title: '(50 points)',
-          img: 'recyclebag',
-          challenge: 'Take a Challenge',
-          content: 'Use recycle bag while takeaway',
-          accept: 'Accept Now'
-
+          title: '(30 points)',
+          img: 'carbon',
+          challenge: 'Carbon Footprint Challenge',
+          content: 'Reduce monthly Carbon Footprint by 20%',
+          accept: 'In progress'
         },
         {
           id: 3,
-          title: '(60 points)',
-          img: 'plasticcup',
-          challenge: 'Take a Challenge',
-          content: 'Do not use plastic cup while having hot drinks',
-          accept: 'Accept Now'
-        },
-        {
-          id: 4,
           title: '(30 points)',
           img: 'receipt',
-          challenge: 'Daily Challenge',
-          content: 'Do not request for receipt and plastic bag after purchased',
-          accept: 'Accept Now'
+          challenge: 'No Plastic Bag Challenge',
+          content: 'Do not request for plastic bag when puirchasing goods for one month',
+          accept: 'In progress'
         }
 
       ]

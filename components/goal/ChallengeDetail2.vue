@@ -69,12 +69,13 @@ export default {
         // },
         {
           id: 3,
-          title: '(80 points)',
-          img: 'game',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Entertainment expense by 40%',
-          information: 'Your last statement stated that you have spent Rm420, you have to decrease it to below Rm252 to complete this challenge'
+          title: '(30 points)',
+          img: 'receipt',
+          challenge: 'Daily Challenge',
+          content: 'Do not request for plastic bags for one month',
+          information: 'You play a vital role in reducing the use of plastic bags to save the environment.'
         }
+
         // {
         //   id: 4,
         //   title: '(30 points)',

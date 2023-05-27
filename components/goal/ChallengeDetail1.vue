@@ -61,12 +61,11 @@ export default {
         // }
         {
           id: 2,
-          title: '(50 points)',
-          img: 'recyclebag',
+          title: '(30 points)',
+          img: 'carbon',
           challenge: 'Take a Challenge',
-          content: 'Support GoGreen by using recycle bag instead of plastic bag.',
-          information: 'Take a challenge to show that you bought gogreen product to complete this challenge.'
-
+          content: 'Reduce monthly Carbon Footprint by 20%',
+          information: 'Take a challenge to show that have taken ncessary steps to reduce carbon footprint when makeing digital payment.'
         }
         // {
         //   id: 3,

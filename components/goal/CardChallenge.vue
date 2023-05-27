@@ -34,7 +34,8 @@
                 v-img.rounded-xl(v-if="item.img" :src="img(item.img)" :style="getImgWidth")
                 p.pt-2.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
                 p.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
-                p.pt-5.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit("Accept Now", 300) }}
+                p.pt-5.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
+                p.pt-6.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.accept, 300) }}
   .pb-16
   .pb-4
 </template>
@@ -60,35 +61,27 @@ export default {
         {
           id: 1,
           title: '(50 points)',
-          img: 'fastfood',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Fast Food expenses by 30%',
-
+          img: 'donation',
+          challenge: 'Dontion Challenge',
+          content: 'Make a donation of RM 50 to Environmental NGO',
+          accept: 'Completed'
         },
         {
           id: 2,
-          title: '(50 points)',
-          img: 'recyclebag',
-          challenge: 'Take a Challenge',
-          content: 'Support GoGreen by using recycle bag instead of plastic bag.',
-          information: 'Take a challenge to show that you bought gogreen product to complete this challenge'
-
+          title: '(30 points)',
+          img: 'carbon',
+          challenge: 'Carbon Footprint Challenge',
+          content: 'Reduce monthly Carbon Footprint by 20%',
+          accept: 'In Progress'
         },
         {
           id: 3,
-          title: '(80 points)',
-          img: 'game',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Entertainment expense by 40%',
-        },
-        {
-          id: 4,
           title: '(30 points)',
-          img: 'shopping',
-          challenge: 'Daily Challenge',
-          content: 'Do not request for receipt after purchased but e-receipt'
+          img: 'receipt',
+          challenge: 'No Plastic Bag Challenge',
+          content: 'Do not request for plastic bag when purchasing goods for one month',
+          accept: 'In Progress'
         }
-
       ]
     }
   },
@@ -117,7 +110,7 @@ export default {
       } else if (id === 3) {
         this.$router.push('/challengedetail2')
       } else {
-        this.$router.push('/quiz')
+        this.$router.push('/challengedetail3')
       }
     },
     goToVoucherPage () {

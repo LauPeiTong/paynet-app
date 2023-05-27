@@ -52,10 +52,10 @@ export default {
         {
           id: 1,
           title: '(50 points)',
-          img: 'fastfood',
-          challenge: 'Take a Challenge',
-          content: 'Reduce your Fast Food expenses by 30%',
-          information: 'Your last statement for fast food expenses are Rm200, you have to reduce it to below Rm140 to complete this challenge'
+          img: 'donation',
+          challenge: 'Donation Challenge',
+          content: 'Make a donation of RM 50 to Environmental NGO',
+          information: 'Take a challenge to help Environmental NGO combat global warming.'
         }
         // {
         //   id: 2,
