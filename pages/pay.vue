@@ -11,7 +11,7 @@
             span Payment Failed
 
           .validation-pending(v-if="validationPending")
-            span Long validation in progress...
+            span Scanning...
         p.mt-3.white--text Place the QR in the Scan Area
 
     qrcode-stream(:camera="camera")

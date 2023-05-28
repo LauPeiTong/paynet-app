@@ -7,7 +7,7 @@
           v-img(:src="coins")
         v-list-item-content
           v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Teco Points:
-          v-list-item-subtitle.font-weight-bold.text-h4.primary--text 456
+          v-list-item-subtitle.font-weight-bold.text-h4.primary--text {{ points }}
     v-list-item.mx-2
       v-list-item-title.font-weight-medium.text-h6
         |
@@ -46,6 +46,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      points: 'payment/getPoints'
     })
   },
   methods: {

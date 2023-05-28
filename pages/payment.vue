@@ -62,10 +62,12 @@ export default {
   },
   watch: {
     paymentStatus (newValue) {
-      setTimeout(() => {
-        this.paymentApproved(false)
-        this.$router.push('/paymentsuccessful')
-      }, 2000)
+      if (newValue) {
+        setTimeout(() => {
+          this.paymentApproved(false)
+          this.$router.push('/paymentsuccessful')
+        }, 2000)
+      }
     }
   },
   methods: {
