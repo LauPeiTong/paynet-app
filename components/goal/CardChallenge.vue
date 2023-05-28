@@ -39,12 +39,14 @@
         )
           .px-4.pt-4.mb-auto
             v-row
-              v-col
+              v-col.pb-6
                 v-img.rounded-xl(v-if="item.img" :src="img(item.img)" :style="getImgWidth")
                 p.pt-2.mb-0.font-weight-bold.subtitle-1.secondary--text.text-justify {{ $strLimit(item.challenge, 300) }}
                 p.mb-0.font-weight-regular.subtitle-2.secondary--text.text-justify {{ $strLimit(item.content, 300) }}
-                p.pt-5.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
-                p.pt-6.pb-2.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.accept, 300) }}
+                p.mb-0.font-weight-regular.subtitle-4.primary--text.text-justify {{ $strLimit(item.label, 300) }}
+                p.text-h5.orange--text {{ item.point }} Points
+                .d-flex.justify-end
+                  v-chip.mb-0.font-weight-regular.subtitle-4(color="primary" outlined) {{ $strLimit(item.accept, 300) }}
   .pb-16
   .pb-4
 </template>
@@ -72,9 +74,10 @@ export default {
           id: 1,
           title: '(50 points)',
           img: 'donation',
-          challenge: 'Dontion Challenge',
+          challenge: 'Donation Challenge',
           content: 'Make a donation of RM 50 to Environmental NGO',
-          accept: 'Completed'
+          accept: 'Completed',
+          point: 50
         },
         {
           id: 2,
@@ -82,7 +85,8 @@ export default {
           img: 'carbon',
           challenge: 'Carbon Footprint Challenge',
           content: 'Reduce monthly Carbon Footprint by 20%',
-          accept: 'In Progress'
+          accept: 'In Progress',
+          point: 30
         },
         {
           id: 3,
@@ -90,7 +94,8 @@ export default {
           img: 'receipt',
           challenge: 'No Plastic Bag Challenge',
           content: 'Do not request for plastic bag when purchasing goods for one month',
-          accept: 'In Progress'
+          accept: 'In Progress',
+          point: 30
         }
       ]
     }
