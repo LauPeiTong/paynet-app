@@ -1,9 +1,9 @@
 export const state = () => ({
   currentCategory: null,
   categories: [
-    { id: 0, name: 'Food', icon: 'shopping-cart-outline', color: '#0083BB', amount: 475.5, colorName: 'primary', img: 'Food' },
-    { id: 1, name: 'Transport', icon: 'car-outline', color: '#035172', amount: 950, colorName: 'tertiary', img: 'Car' },
-    { id: 2, name: 'Products', icon: 'gift-outline', color: '#C82F2F', amount: 740, colorName: 'danger', img: 'Item' }
+    { id: 0, name: 'Food', icon: 'shopping-cart-outline', color: '#237ABC', amount: 475.5, colorName: 'primary', img: 'Food' },
+    { id: 1, name: 'Transport', icon: 'car-outline', color: '#3BB04A', amount: 950, colorName: 'tertiary', img: 'Car' },
+    { id: 2, name: 'Products', icon: 'gift-outline', color: '#F49022', amount: 740, colorName: 'danger', img: 'Item' }
   ],
   expenses: [
     { id: 0, name: 'GrabPay-EC', amount: 1500, category: 0 },

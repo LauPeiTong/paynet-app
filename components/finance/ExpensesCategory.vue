@@ -11,7 +11,7 @@
       template(v-slot:default="{item}")
         v-card(outlined).align-center.rounded-xl
             v-card.mx-auto.pa-3.category-card(
-              @click="goToExpensesDetails(item)"
+              @click=""
               elevation="0"
               :color="item.color"
             )
@@ -60,11 +60,11 @@ export default {
   methods: {
     ...mapActions({
       changeCurrentCategory: 'expenses/changeCurrentCategory'
-    }),
-    goToExpensesDetails (item) {
-      this.changeCurrentCategory(item)
-      this.$router.push('/expensesdetails')
-    }
+    })
+    // goToExpensesDetails (item) {
+    //   this.changeCurrentCategory(item)
+    //   this.$router.push('/expensesdetails')
+    // }
   }
 }
 </script>

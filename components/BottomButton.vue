@@ -8,6 +8,13 @@
         :color="$vuetify.theme.themes.light.primary"
         @click="emitClick"
       )
+      f-button.bottom-nav--button.mt-3(
+        v-if="secondBtn"
+        :label="label2"
+        block
+        :color="'#ECEFF1'"
+        @click="emitClick2"
+      )
 </template>
 
 <script>
@@ -21,6 +28,14 @@ export default {
     label: {
       type: String,
       default: null
+    },
+    label2: {
+      type: String,
+      default: null
+    },
+    secondBtn: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -36,6 +51,9 @@ export default {
     }),
     emitClick () {
       this.$emit('click')
+    },
+    emitClick2 () {
+      this.$emit('click2')
     }
   }
 }

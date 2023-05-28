@@ -13,19 +13,19 @@
   )
     template(v-slot:default="{ value }")
       strong.white--text {{ Math.ceil(value) }}% to Level 15
-  v-card.rounded-lg.mt-4(outlined)
-    v-list-item.pt-2(three-line)
-      v-list-item-avatar(size="60" tile)
-        v-img(:src="coins")
-      v-list-item-content
-        v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
-        v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
-    v-divider.mx-4
-    v-list-item
-      v-list-item-title.font-weight-medium.text-h6
-        |
-        a.orange--text(@click="goToVoucherPage()") Redeem your vouchers
-      eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.orange")
+  //- v-card.rounded-lg.mt-4(outlined)
+  //-   v-list-item.pt-2(three-line)
+  //-     v-list-item-avatar(size="60" tile)
+  //-       v-img(:src="coins")
+  //-     v-list-item-content
+  //-       v-list-item-title.secondary--text.font-weight-medium.text-h6.mt-2 Total Eco Points:
+  //-       v-list-item-subtitle.font-weight-bold.text-h4.primary--text 1456
+  //-   v-divider.mx-4
+  //-   v-list-item
+  //-     v-list-item-title.font-weight-medium.text-h6
+  //-       |
+  //-       a.orange--text(@click="goToVoucherPage()") Redeem your vouchers
+  //-     eva-icon.mt-2(name="gift-outline" :fill="$vuetify.theme.themes.light.orange")
   v-row.pa-0.ma-0
     v-col.pa-0.ma-0
       p.text-h6.font-weight-bold.pt-6.mb-0.secondary--text Challenges

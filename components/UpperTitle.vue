@@ -8,7 +8,8 @@ v-row.pt-8.pb-6.upper-title(dense :class="titleClass")
         @click="emitBack()"
       )
     v-col.text-center(:cols="8")
-      h3(:class="textColor") {{ title }}
+      v-img(v-if="isLogo" :src="logo" height="40" contain)
+      h3(v-else :class="textColor") {{ title }}
     v-col.text-center(:cols="2")
       f-icon(
         :icon-name="icon"
@@ -52,10 +53,15 @@ export default {
     rightIconColor: {
       type: String,
       default: null
+    },
+    isLogo: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
+      logo: require('../assets/logo/TEcoPay.png')
     }
   },
   computed: {

@@ -4,7 +4,7 @@
     .d-grid.text-center
       v-img.mx-auto(:src="success" width="350")
       p.text-h4.green--text.font-weight-bold.mb-1 Payment Successful
-      p.subtitle-1 Your paid RM 66.70 at 3:20 P.M. 28/5/2023
+      p.subtitle-1 Your paid {{ placeholder }} at 3:20 P.M. 28/5/2023
       v-dialog(v-model="dialog" width="360")
         template(v-slot:activator="{ on, attrs }")
           v-btn.text-none.rounded-lg.mb-3(
@@ -46,7 +46,7 @@
                       v-col.pl-0.py-2.text-right(:cols="4")
                         p.green--text.font-weight-medium.pt-4.pr-2 {{$formatCurrency(item.price)}}
                   hr.opacity-50.my-2
-                p.text-right.text-h5.green--text Total: RM 66.70
+                p.text-right.text-h5.green--text Total: {{ placeholder }}
                 p.text-right.primary--text +68 Teco Points
 
       f-button(
@@ -81,7 +81,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      scrollSize: 'screen/getScrollClass2'
+      scrollSize: 'screen/getScrollClass2',
+      placeholder: 'payment/getPlaceholder'
     }),
     success () {
       return require('../assets/img/success.png')

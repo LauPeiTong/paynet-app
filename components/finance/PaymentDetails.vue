@@ -12,6 +12,8 @@
             v-img(:src="categoryImg" width="200")
           v-col
         p.font-weight-bold.text-h5 Total Payment: RM 66.70
+        p.text-h6.primary--text or Round up to RM 67.00
+        p.caption (30 cents will be donate to TecoTree Planting Program)
 
   v-card.rounded-lg.mt-3.mb-8(outlined)
     v-list-item.pt-2(three-line)

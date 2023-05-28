@@ -1,5 +1,5 @@
 <template lang="pug">
-.expenses-chart.px-4
+.expenses-chart.px-3
   v-card.rounded-lg(outlined)
     v-list-item.pt-2(three-line)
       v-list-item-content.text-center
@@ -12,6 +12,8 @@
             f-icon(:icon-name="'arrow-ios-forward-outline'" :icon-fill="$vuetify.theme.themes.light.primary" @click="selectNextMonth")
         v-list-item-subtitle.subtitle-1.darkGrey--text Monthly CO2 Emission
         ApexCharts.d-flex.justify-space-around(type="donut" :options="chartOptions" :series="series[this.selectedIndex]" width="320" height="320")
+        v-list-item-title.secondary-text.text-h6.ml-2.mt-2.mb-2.text-center Ave monthly carbon footprint
+        v-list-item-subtitle.text-h6.ml-3.primary--text.text-center  781 kg CO2
 </template>
 
 <script>
@@ -38,7 +40,7 @@ export default {
           show: false
         },
         labels: ['Food', 'Transport', 'Product'],
-        colors: ['#0083BB', '#035172', '#C82F2F'],
+        colors: ['#237ABC', '#3BB04A', '#F49022'],
         plotOptions: {
           pie: {
             expandOnClick: true,

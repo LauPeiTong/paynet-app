@@ -4,7 +4,7 @@ v-app
     v-container.fill-height.pa-0(fluid)
       v-row.ma-0.fill-height
         Nuxt
-        bottom-button(:label="'Make Payment'" @click="paymentApproved(true)")
+        bottom-button(:label="'Pay and Donate (RM 67.00)'" @click="paymentApproved(true)" @click2="paymentApproved2(true)" :secondBtn="true" :label2="'Pay (RM 66.70)'")
 </template>
 
 <script>
@@ -22,8 +22,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      paymentApproved: 'payment/changePaymentStatus'
-
+      paymentApproved: 'payment/changePaymentStatus',
+      paymentApproved2: 'payment/changePaymentStatus2'
     })
   }
 }
