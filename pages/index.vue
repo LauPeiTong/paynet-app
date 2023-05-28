@@ -15,7 +15,7 @@ export default {
     }
   },
   created () {
-    setTimeout(() => this.$router.push({ path: '/finance' }), 1000)
+    setTimeout(() => this.$router.push({ path: '/home' }), 1000)
   },
   methods: {
     ...mapActions({
