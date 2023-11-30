@@ -8,7 +8,7 @@ You can access the web app through this linK: https://paynet-app.netlify.app
 [<img src="./assets/img/UI1.png" width="300" />](./assets/img/UI1.png)
 
 ### Payment page
-Scan the QR to make payment
+Scan the QR to make payment\n
 [<img src="./assets/img/UI2.png" width="300" />](./assets/img/UI2.png)
 
 [<img src="./assets/img/UI3.png" width="300" />](./assets/img/UI3.png)
