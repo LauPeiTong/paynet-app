@@ -1,4 +1,11 @@
-# fincare-app
+# TecoPay
+
+## App Overview
+You can access the web app through this linK: https://paynet-app.netlify.app
+
+## App UI Design
+### Home page
+
 
 ## Build Setup
 
