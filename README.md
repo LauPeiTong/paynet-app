@@ -12,8 +12,16 @@ Scan the QR to make payment
 
 [<img src="./assets/img/UI2.png" width="300" />](./assets/img/UI2.png)
 
+View payment details
+
 [<img src="./assets/img/UI3.png" width="300" />](./assets/img/UI3.png)
+
+Payment successful
+
 [<img src="./assets/img/UI4.png" width="300" />](./assets/img/UI4.png)
+
+View receipt
+
 [<img src="./assets/img/UI5.png" width="300" />](./assets/img/UI5.png)
 
 ### Challenge page
