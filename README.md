@@ -5,6 +5,21 @@ You can access the web app through this linK: https://paynet-app.netlify.app
 
 ## App UI Design
 ### Home page
+[<img src="./assets/img/UI1.png" width="300" />](./assets/img/UI1.png)
+
+### Payment page
+Scan the QR to make payment
+[<img src="./assets/img/UI2.png" width="300" />](./assets/img/UI2.png)
+
+[<img src="./assets/img/UI3.png" width="300" />](./assets/img/UI3.png)
+[<img src="./assets/img/UI4.png" width="300" />](./assets/img/UI4.png)
+[<img src="./assets/img/UI5.png" width="300" />](./assets/img/UI5.png)
+
+### Challenge page
+[<img src="./assets/img/UI7.png" width="300" />](./assets/img/UI7.png)
+
+### Donation page
+[<img src="./assets/img/UI6.png" width="300" />](./assets/img/UI6.png)
 
 
 ## Build Setup
